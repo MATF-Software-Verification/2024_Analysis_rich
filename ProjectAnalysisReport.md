@@ -1,10 +1,10 @@
 # Analiza projekta Rich
 
 ## 1. Uvod
-Kratak opis projekta Rich, šta radi i šta je cilj analize.
+
 
 ## 2. Cilj analize
-Opis šta je cilj seminarskog rada (testiranje, pronalazak bagova, analiza pokrivenosti, itd.)
+
 
 ## 3. Testiranje i pokrivenost koda
 Ukupna pokrivenost koda iznosi 95%, pri čemu su moduli `_win32_console.py` i `_windows_renderer.py` platform-specific i nisu pokriveni na Linux okruženju. Većina ključnih funkcionalnosti ima pokrivenost preko 98%.
@@ -15,7 +15,7 @@ Dodatno:
 
 ## 4. Alati korišćeni za analizu
 - pytest + coverage
-- (ostatak alata dodaj kasnije)
+  
 
 ## 5. Zaključci
-Kratak rezime šta analiza pokazuje i potencijalna poboljšanja.
+
