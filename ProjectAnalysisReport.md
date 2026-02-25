@@ -6,7 +6,7 @@
 ## 2. Cilj analize
 
 
-3. Testiranje i pokrivenost koda
+## 3. Testiranje i pokrivenost koda
 Ukupna pokrivenost koda iznosi 95%, pri čemu su moduli _win32_console.py i _windows_renderer.py platform-specific i nisu pokriveni na Linux okruženju. Većina ključnih funkcionalnosti ima pokrivenost preko 98%.
 
 Dodatno:
