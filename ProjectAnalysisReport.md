@@ -7,13 +7,15 @@
 
 
 ## 3. Testiranje i pokrivenost koda
-Ukupna pokrivenost koda iznosi 95%, pri čemu su moduli _win32_console.py i _windows_renderer.py platform-specific i nisu pokriveni na Linux okruženju. Većina ključnih funkcionalnosti ima pokrivenost preko 98%.
+Analiza pokrivenosti testovima
 
-Dodatno:
+Pokrivenost koda testovima analizirana je korišćenjem alata pytest i pytest-cov nad projektom Rich. Pokretanjem testova izvršeno je ukupno 978 testova, od čega je 953 uspešno prošlo, dok je 25 testova preskočeno.
 
-Najslabije pokriveni moduli: traceback.py, progress.py, live.py, pretty.py
+Ukupna pokrivenost koda iznosi približno 93%, što ukazuje na to da projekat već poseduje razvijen skup automatskih testova.
 
-Plan za dopunu testova: napisati 2–3 unit testa i 1 integration test
+Analiza izveštaja o pokrivenosti pokazuje da pojedini moduli imaju manju pokrivenost, kao što su json.py, jupyter.py i repr.py. Ovi moduli predstavljaju potencijalne kandidate za dodatno testiranje.
+
+Takođe je uočeno da moduli koji implementiraju funkcionalnosti specifične za Windows operativni sistem imaju veoma malu pokrivenost testovima, što je očekivano jer je analiza projekta izvršena u Linux okruženju.
 
 **Primer dodatnog testa:**
 
