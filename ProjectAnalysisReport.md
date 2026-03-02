@@ -1,7 +1,6 @@
 # Izveštaj o analizi projekta: Rich
 
-**Autor**: Jovan Ranđelović  
-**Indeks**: [tvoj broj indeksa]  
+**Autor**: Jovan Ranđelović  1088/2023
 **Kurs**: Verifikacija Softvera  
 
 ---
