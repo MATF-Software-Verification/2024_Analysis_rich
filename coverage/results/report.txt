@@ -1,0 +1,185 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/solomon/Desktop/rich/tests
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 977 items
+
+../rich/tests/test_align.py ................                             [  1%]
+../rich/tests/test_ansi.py .......................                       [  3%]
+../rich/tests/test_bar.py .......                                        [  4%]
+../rich/tests/test_block_bar.py ....                                     [  5%]
+../rich/tests/test_box.py ........                                       [  5%]
+../rich/tests/test_card.py .                                             [  6%]
+../rich/tests/test_cells.py ............................................ [ 10%]
+.........................                                                [ 13%]
+../rich/tests/test_color.py .................                            [ 14%]
+../rich/tests/test_color_triplet.py ...                                  [ 15%]
+../rich/tests/test_columns.py .                                          [ 15%]
+../rich/tests/test_columns_align.py .                                    [ 15%]
+../rich/tests/test_console.py .......................................... [ 19%]
+.........................................................                [ 25%]
+../rich/tests/test_constrain.py .                                        [ 25%]
+../rich/tests/test_containers.py ....                                    [ 25%]
+../rich/tests/test_control.py .......                                    [ 26%]
+../rich/tests/test_emoji.py ......                                       [ 27%]
+../rich/tests/test_file_proxy.py ...                                     [ 27%]
+../rich/tests/test_filesize.py ..                                        [ 27%]
+../rich/tests/test_getfileno.py ...                                      [ 28%]
+../rich/tests/test_highlighter.py ...................................... [ 32%]
+.............................................                            [ 36%]
+../rich/tests/test_inspect.py ...s....sss............................... [ 40%]
+....                                                                     [ 41%]
+../rich/tests/test_json.py .                                             [ 41%]
+../rich/tests/test_jupyter.py ...                                        [ 41%]
+../rich/tests/test_layout.py ......                                      [ 42%]
+../rich/tests/test_live.py ...........                                   [ 43%]
+../rich/tests/test_live_render.py ....                                   [ 43%]
+../rich/tests/test_log.py ...                                            [ 44%]
+../rich/tests/test_logging.py ....                                       [ 44%]
+../rich/tests/test_markdown.py .......                                   [ 45%]
+../rich/tests/test_markdown_no_hyperlinks.py .                           [ 45%]
+../rich/tests/test_markup.py .....................                       [ 47%]
+../rich/tests/test_measure.py ....                                       [ 48%]
+../rich/tests/test_null_file.py .                                        [ 48%]
+../rich/tests/test_padding.py .....                                      [ 48%]
+../rich/tests/test_palette.py .                                          [ 48%]
+../rich/tests/test_panel.py .............                                [ 50%]
+../rich/tests/test_pick.py .                                             [ 50%]
+../rich/tests/test_pretty.py ........................................... [ 54%]
+.s.......                                                                [ 55%]
+../rich/tests/test_progress.py .......................................   [ 59%]
+../rich/tests/test_prompt.py ........                                    [ 60%]
+../rich/tests/test_protocol.py ......                                    [ 60%]
+../rich/tests/test_ratio.py .......                                      [ 61%]
+../rich/tests/test_repr.py ........                                      [ 62%]
+../rich/tests/test_rich_print.py .......                                 [ 63%]
+../rich/tests/test_rule.py ................                              [ 64%]
+../rich/tests/test_rule_in_table.py ....                                 [ 65%]
+../rich/tests/test_screen.py .                                           [ 65%]
+../rich/tests/test_segment.py .......................................... [ 69%]
+...................                                                      [ 71%]
+../rich/tests/test_spinner.py .....                                      [ 72%]
+../rich/tests/test_stack.py .                                            [ 72%]
+../rich/tests/test_status.py ..                                          [ 72%]
+../rich/tests/test_style.py ...........................                  [ 75%]
+../rich/tests/test_styled.py .                                           [ 75%]
+../rich/tests/test_syntax.py .........................                   [ 77%]
+../rich/tests/test_table.py .....................                        [ 79%]
+../rich/tests/test_text.py ............................................. [ 84%]
+....................................................................     [ 91%]
+../rich/tests/test_theme.py .....                                        [ 92%]
+../rich/tests/test_tools.py ....                                         [ 92%]
+../rich/tests/test_traceback.py ...................s...                  [ 94%]
+../rich/tests/test_tree.py .....s.s.                                     [ 95%]
+../rich/tests/test_unicode_data.py .........................             [ 98%]
+../rich/tests/test_windows_renderer.py sssssssssssssssss                 [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                                                             Stmts   Miss  Cover
+------------------------------------------------------------------------------------
+/home/solomon/Desktop/rich/rich/__init__.py                         31      2    94%
+/home/solomon/Desktop/rich/rich/__main__.py                         68      0   100%
+/home/solomon/Desktop/rich/rich/_emoji_codes.py                      1      0   100%
+/home/solomon/Desktop/rich/rich/_emoji_replace.py                   18      0   100%
+/home/solomon/Desktop/rich/rich/_export_format.py                    4      0   100%
+/home/solomon/Desktop/rich/rich/_extension.py                        1      0   100%
+/home/solomon/Desktop/rich/rich/_fileno.py                          10      0   100%
+/home/solomon/Desktop/rich/rich/_inspect.py                        146      2    99%
+/home/solomon/Desktop/rich/rich/_log_render.py                      48      0   100%
+/home/solomon/Desktop/rich/rich/_loop.py                            33      0   100%
+/home/solomon/Desktop/rich/rich/_null_file.py                       42      0   100%
+/home/solomon/Desktop/rich/rich/_palettes.py                         4      0   100%
+/home/solomon/Desktop/rich/rich/_pick.py                             7      0   100%
+/home/solomon/Desktop/rich/rich/_ratio.py                           70      8    89%
+/home/solomon/Desktop/rich/rich/_spinners.py                         1      0   100%
+/home/solomon/Desktop/rich/rich/_stack.py                            8      0   100%
+/home/solomon/Desktop/rich/rich/_timer.py                           10     10     0%
+/home/solomon/Desktop/rich/rich/_unicode_data/__init__.py           43      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/_versions.py           1      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode4-1-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode5-0-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode5-1-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode5-2-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode6-0-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode6-1-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode6-2-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode6-3-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode7-0-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode8-0-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode9-0-0.py        2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode10-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode11-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode12-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode12-1-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode13-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode14-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode15-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode15-1-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode16-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_unicode_data/unicode17-0-0.py       2      0   100%
+/home/solomon/Desktop/rich/rich/_win32_console.py                  271    265     2%
+/home/solomon/Desktop/rich/rich/_windows.py                         41     41     0%
+/home/solomon/Desktop/rich/rich/_windows_renderer.py                45     45     0%
+/home/solomon/Desktop/rich/rich/_wrap.py                            41      0   100%
+/home/solomon/Desktop/rich/rich/abc.py                               5      0   100%
+/home/solomon/Desktop/rich/rich/align.py                           125      0   100%
+/home/solomon/Desktop/rich/rich/ansi.py                             74      0   100%
+/home/solomon/Desktop/rich/rich/bar.py                              42      0   100%
+/home/solomon/Desktop/rich/rich/box.py                             102      0   100%
+/home/solomon/Desktop/rich/rich/cells.py                           160      0   100%
+/home/solomon/Desktop/rich/rich/color.py                           190      0   100%
+/home/solomon/Desktop/rich/rich/color_triplet.py                    20      0   100%
+/home/solomon/Desktop/rich/rich/columns.py                          98      0   100%
+/home/solomon/Desktop/rich/rich/console.py                         998     52    95%
+/home/solomon/Desktop/rich/rich/constrain.py                        17      0   100%
+/home/solomon/Desktop/rich/rich/containers.py                       82      0   100%
+/home/solomon/Desktop/rich/rich/control.py                          59      0   100%
+/home/solomon/Desktop/rich/rich/default_styles.py                    3      0   100%
+/home/solomon/Desktop/rich/rich/diagnose.py                          6      6     0%
+/home/solomon/Desktop/rich/rich/emoji.py                            31      0   100%
+/home/solomon/Desktop/rich/rich/errors.py                            9      0   100%
+/home/solomon/Desktop/rich/rich/file_proxy.py                       40      1    98%
+/home/solomon/Desktop/rich/rich/filesize.py                         20      0   100%
+/home/solomon/Desktop/rich/rich/highlighter.py                      53      0   100%
+/home/solomon/Desktop/rich/rich/json.py                             42     17    60%
+/home/solomon/Desktop/rich/rich/jupyter.py                          59     29    51%
+/home/solomon/Desktop/rich/rich/layout.py                          204     10    95%
+/home/solomon/Desktop/rich/rich/live.py                            160     11    93%
+/home/solomon/Desktop/rich/rich/live_render.py                      52      1    98%
+/home/solomon/Desktop/rich/rich/logging.py                          80      2    98%
+/home/solomon/Desktop/rich/rich/markdown.py                        373      2    99%
+/home/solomon/Desktop/rich/rich/markup.py                          119      0   100%
+/home/solomon/Desktop/rich/rich/measure.py                          54      0   100%
+/home/solomon/Desktop/rich/rich/padding.py                          67      0   100%
+/home/solomon/Desktop/rich/rich/pager.py                             8      0   100%
+/home/solomon/Desktop/rich/rich/palette.py                          32      0   100%
+/home/solomon/Desktop/rich/rich/panel.py                           119      2    98%
+/home/solomon/Desktop/rich/rich/pretty.py                          396     13    97%
+/home/solomon/Desktop/rich/rich/progress.py                        623     50    92%
+/home/solomon/Desktop/rich/rich/progress_bar.py                    100      1    99%
+/home/solomon/Desktop/rich/rich/prompt.py                          103      0   100%
+/home/solomon/Desktop/rich/rich/protocol.py                         18      0   100%
+/home/solomon/Desktop/rich/rich/region.py                            6      0   100%
+/home/solomon/Desktop/rich/rich/repr.py                             73     18    75%
+/home/solomon/Desktop/rich/rich/rule.py                             69      0   100%
+/home/solomon/Desktop/rich/rich/scope.py                            19      0   100%
+/home/solomon/Desktop/rich/rich/screen.py                           22      0   100%
+/home/solomon/Desktop/rich/rich/segment.py                         331      3    99%
+/home/solomon/Desktop/rich/rich/spinner.py                          49      0   100%
+/home/solomon/Desktop/rich/rich/status.py                           42      0   100%
+/home/solomon/Desktop/rich/rich/style.py                           431      2    99%
+/home/solomon/Desktop/rich/rich/styled.py                           15      0   100%
+/home/solomon/Desktop/rich/rich/syntax.py                          344      8    98%
+/home/solomon/Desktop/rich/rich/table.py                           410      0   100%
+/home/solomon/Desktop/rich/rich/terminal_theme.py                   14      0   100%
+/home/solomon/Desktop/rich/rich/text.py                            612      6    99%
+/home/solomon/Desktop/rich/rich/theme.py                            39      0   100%
+/home/solomon/Desktop/rich/rich/themes.py                            3      0   100%
+/home/solomon/Desktop/rich/rich/traceback.py                       303     35    88%
+/home/solomon/Desktop/rich/rich/tree.py                            104      0   100%
+------------------------------------------------------------------------------------
+TOTAL                                                             8615    642    93%
+======================= 952 passed, 25 skipped in 35.28s =======================

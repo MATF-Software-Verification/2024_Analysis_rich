@@ -11,7 +11,7 @@ Analiza pokrivenosti testovima
 
 Pokrivenost koda testovima analizirana je korišćenjem alata pytest i pytest-cov nad projektom Rich. Pokretanjem testova izvršeno je ukupno 978 testova, od čega je 953 uspešno prošlo, dok je 25 testova preskočeno.
 
-Ukupna pokrivenost koda iznosi približno 93%, što ukazuje na to da projekat već poseduje razvijen skup automatskih testova.
+Ukupna pokrivenost koda iznosi približno 95%, što ukazuje na to da projekat već poseduje razvijen skup automatskih testova.
 
 Analiza izveštaja o pokrivenosti pokazuje da pojedini moduli imaju manju pokrivenost, kao što su json.py, jupyter.py i repr.py. Ovi moduli predstavljaju potencijalne kandidate za dodatno testiranje.
 

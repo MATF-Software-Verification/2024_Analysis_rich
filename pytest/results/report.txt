@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/solomon/Desktop/2024_Analysis_rich/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/solomon/Desktop/2024_Analysis_rich
+plugins: cov-7.0.0
+collecting ... collected 2 items
+
+tests/test_json_unit.py::test_json_basic PASSED                          [ 50%]
+tests/test_progress_unit.py::test_progress_percent_completion PASSED     [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                                      Stmts   Miss  Cover
+-------------------------------------------------------------
+/home/solomon/Desktop/rich/rich/json.py      42     24    43%
+-------------------------------------------------------------
+TOTAL                                        42     24    43%
+Coverage HTML written to dir pytest/results/html
+============================== 2 passed in 3.42s ===============================
