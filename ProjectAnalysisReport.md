@@ -1,31 +1,65 @@
-# Analiza projekta Rich
+# Izveštaj o analizi projekta: Rich
+
+**Autor**: Jovan Ranđelović  
+**Indeks**: [tvoj broj indeksa]  
+**Kurs**: Verifikacija Softvera  
+
+---
 
 ## 1. Uvod
 
+### 1.1 Kontekst i motivacija
 
-## 2. Cilj analize
+Rich je Python biblioteka za **renderovanje lepog terminal output-a**: boje, tabele, progress bar-ove, JSON, Markdown, logovanje i drugo.  
 
+Razvoj robustnih CLI alata i vizuelno bogatih terminal aplikacija zahteva biblioteku koja apstrahuje složenost renderovanja i stilizovanja teksta. Rich se koristi u širokom spektru projekata – od development alata do monitoring skripti.
 
-## 3. Testiranje i pokrivenost koda
-Analiza pokrivenosti testovima
+### 1.2 Ciljevi analize
 
-Pokrivenost koda testovima analizirana je korišćenjem alata pytest i pytest-cov nad projektom Rich. Pokretanjem testova izvršeno je ukupno 978 testova, od čega je 953 uspešno prošlo, dok je 25 testova preskočeno.
+Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 
-Ukupna pokrivenost koda iznosi približno 95%, što ukazuje na to da projekat već poseduje razvijen skup automatskih testova.
+- Pokrivenost koda testovima
+- Validaciju funkcionalnosti preko unit testova
+- Analizu održivosti i kompleksnosti
+- Proveru type safety i bezbednosti
 
-Analiza izveštaja o pokrivenosti pokazuje da pojedini moduli imaju manju pokrivenost, kao što su json.py, jupyter.py i repr.py. Ovi moduli predstavljaju potencijalne kandidate za dodatno testiranje.
+**Primarne metrike**:
 
-Takođe je uočeno da moduli koji implementiraju funkcionalnosti specifične za Windows operativni sistem imaju veoma malu pokrivenost testovima, što je očekivano jer je analiza projekta izvršena u Linux okruženju.
+- Korektnost implementacije (unit testovi)
+- Pokrivenost koda testovima
+- Održavanje koda i kompleksnost
 
-**Primer dodatnog testa:**
+---
 
-- **Testiranje progress.py**  
-  Napisan je jednostavan unit test koji proverava procentualnu završetak task-a (50% i 100%).  
-  Test se uspešno izvršava pomoću pytest i coverage alata, i pokriva osnovne linije funkcionalnosti modula `progress.py`.
+## 2. Korišćeni alati
 
-## 4. Alati korišćeni za analizu
-- pytest + coverage
-  
+### 2.1 Pytest – Jedinični testovi
 
-## 5. Zaključci
+**Opis**: Framework za pisanje i pokretanje unit testova u Python-u.  
 
+**Korišćenje**: Napisana su 2 jednostavna testa koji pokrivaju osnovne funkcionalnosti Rich biblioteke:
+
+#### test_json_custom.py (1 test)
+
+**Cilj**: Testiranje osnovnog renderovanja JSON objekata
+
+**Pokriveni scenariji**:
+
+- Renderovanje validnog JSON stringa  
+- Provera prisustva ključnih vrednosti (`string`, `number`, `list`) u terminal output-u  
+- Integracija `JSON` objekta sa `Console` klasom
+
+#### test_progress_unit.py (1 test)
+
+**Cilj**: Testiranje osnovnog rada progress bar-a
+
+**Pokriveni scenariji**:
+
+- Kreiranje progress objekta i dodavanje taska  
+- Ažuriranje taska i izračunavanje procenta završetka  
+- Provera da logika progress bara pravilno računa completion procent  
+
+**Komanda za pokretanje testova**:
+
+```bash
+pytest unit_tests/ -v

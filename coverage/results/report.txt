@@ -182,4 +182,5 @@ Name                                                             Stmts   Miss  C
 /home/solomon/Desktop/rich/rich/tree.py                            104      0   100%
 ------------------------------------------------------------------------------------
 TOTAL                                                             8615    642    93%
-======================= 952 passed, 25 skipped in 35.28s =======================
+Coverage HTML written to dir coverage/results/html
+======================= 952 passed, 25 skipped in 47.20s =======================
