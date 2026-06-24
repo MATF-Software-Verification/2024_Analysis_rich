@@ -1,6 +1,4 @@
 .coverage
 __pycache__/
 htmlcov/
-.coverage
-__pycahce__/
-htmlcov/
+*.pyc
