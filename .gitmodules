@@ -1,3 +1,6 @@
 [submodule "external/rich"]
 	path = external/rich
 	url = https://github.com/Textualize/rich
+[submodule "rich"]
+	path = rich
+	url = https://github.com/Textualize/rich
