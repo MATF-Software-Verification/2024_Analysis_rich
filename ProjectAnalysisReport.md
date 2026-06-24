@@ -33,32 +33,12 @@ Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 ## 2. Korišćeni alati
 
 ### 2.1 Pytest – Jedinični testovi
+**Opis**: Framework za pisanje i pokretanje jediničnih testova u Python-u.
 
-**Opis**: Framework za pisanje i pokretanje unit testova u Python-u.  
+**Korišćenje**: Napisano X novih unit testova koji pokrivaju:
 
-**Korišćenje**: Napisana su 2 jednostavna testa koji pokrivaju osnovne funkcionalnosti Rich biblioteke:
+**test_iter_syntax_lines_multiline.py** (1 test)
+Cilj: Testiranje funkcije `_iter_syntax_lines` za slučaj kada greška obuhvata više linija koda.
+Pokriveni scenariji:
+- `test_iter_syntax_lines_multiline` - Provera ispravnog označavanja opsega greške kroz više linija (prva, srednja i poslednja linija)
 
-#### test_json_custom.py (1 test)
-
-**Cilj**: Testiranje osnovnog renderovanja JSON objekata
-
-**Pokriveni scenariji**:
-
-- Renderovanje validnog JSON stringa  
-- Provera prisustva ključnih vrednosti (`string`, `number`, `list`) u terminal output-u  
-- Integracija `JSON` objekta sa `Console` klasom
-
-#### test_progress_unit.py (1 test)
-
-**Cilj**: Testiranje osnovnog rada progress bar-a
-
-**Pokriveni scenariji**:
-
-- Kreiranje progress objekta i dodavanje taska  
-- Ažuriranje taska i izračunavanje procenta završetka  
-- Provera da logika progress bara pravilno računa completion procent  
-
-**Komanda za pokretanje testova**:
-
-```bash
-pytest unit_tests/ -v
