@@ -53,3 +53,44 @@ Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 * `test_get_locals_hide_sunder` - filtriranje sunder promenljivih (`locals_hide_sunder=True`)
 * `test_get_locals_show_all` - prikaz svih lokalnih promenljivih (oba flaga `False`)
 * `test_iter_syntax_lines_multiline` - `_iter_syntax_lines` vraća tačan niz tuple-ova za višelinijski opseg
+
+#### progress.py (6 testova)
+
+**Cilj:** Testiranje `rich.progress` modula — kreiranje progress barova, upravljanje taskovima, čitanje fajlova sa praćenjem napretka i pozadinsko ažuriranje
+
+**Pokriveni scenariji:**
+
+* `test_progress_creation` - kreiranje `Progress`-a sa custom kolonama (`TextColumn`, `BarColumn`, `TimeRemainingColumn`) i verifikacija default vrednosti (`finished=True` bez taskova, `disable=False`, `expand=False`)
+* `test_add_task` - dodavanje taska preko `add_task()` i provera inicijalnog stanja (`description`, `total`, `completed=0`, `finished=False`)
+* `test_task_defaults` - default vrednosti `Task` objekta (`finished=False`, `visible=True`)
+* `test_task_percentage` - izračunavanje procenta napretka (`completed=50`, `total=100` → `percentage=50.0`)
+* `test_reader_next` - `_Reader` wrapper čita fajl liniju po liniju i inkrementalno ažurira napredak taska
+* `test_track_thread_advances` - `_TrackThread` pozadinska nit ažurira `completed` vrednost taska tokom vremena
+#### live.py (5 testova)
+
+**Cilj:** Testiranje `rich.live` modula — kreiranje i životni ciklus `Live` displeja, ažuriranje sadržaja, ugneždeni displeji i auto-refresh ponašanje
+
+**Pokriveni scenariji:**
+
+* `test_live_creation` - default vrednosti `Live` objekta (`is_started=False`, `auto_refresh=True`, `_nested=False`, `transient=False`)
+* `test_live_is_started` - životni ciklus preko `start()` / `stop()` i praćenje `is_started` stanja
+* `test_live_update` - ažuriranje sadržaja preko `update()`, string se konvertuje u `Text` objekat
+* `test_live_auto_refresh_false` - sa `auto_refresh=False` ne kreira se refresh nit (`_refresh_thread is None`), context manager korektno gasi displej
+* `test_live_nested` - ugnežden `Live` unutar drugog dobija `_nested=True`
+#### panel.py (3 testa)
+
+**Cilj:** Testiranje `rich.panel` modula — kreiranje panela, fit režim i rukovanje naslovom
+
+**Pokriveni scenariji:**
+
+* `test_panel_creation` - default vrednosti `Panel` objekta (`title=None`, `subtitle=None`, `expand=True`, `highlight=False`)
+* `test_panel_fit` - `Panel.fit()` kreira panel koji se skuplja na sadržaj (`expand=False`) uz prosleđen naslov
+* `test_panel_with_title` - panel sa naslovom, default poravnanje naslova je `center` (`title_align="center"`)
+#### table.py (2 testa)
+
+**Cilj:** Testiranje `rich.table` modula — kreiranje tabela sa kolonama i redovima, kao i grid režim
+
+**Pokriveni scenariji:**
+
+* `test_table_add_column_and_row` - kreiranje tabele sa 3 kolone, dodavanje reda preko `add_row()` i verifikacija `columns`/`row_count` i header vrednosti
+* `test_table_grid` - `Table.grid()` kreira tabelu bez okvira i header-a (`show_header=False`, `show_footer=False`, `show_edge=False`, `box=None`)
