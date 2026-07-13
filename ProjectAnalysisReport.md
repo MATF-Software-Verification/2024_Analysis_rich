@@ -94,3 +94,12 @@ Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 
 * `test_table_add_column_and_row` - kreiranje tabele sa 3 kolone, dodavanje reda preko `add_row()` i verifikacija `columns`/`row_count` i header vrednosti
 * `test_table_grid` - `Table.grid()` kreira tabelu bez okvira i header-a (`show_header=False`, `show_footer=False`, `show_edge=False`, `box=None`)
+**Korišćenje:** Testovi se pokreću iz korenskog direktorijuma projekta komandom:
+
+​```bash
+pytest tests/ -v
+​```
+
+**Rezultati:**
+
+* Svi testovi prolaze: 100% pass rate
