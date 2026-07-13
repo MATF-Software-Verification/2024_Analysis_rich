@@ -32,54 +32,24 @@ Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 
 ## 2. Korišćeni alati
 
-### 2.1 Pytest – Jedinični testovi
-**Opis**: Framework za pisanje i pokretanje jediničnih testova u Python-u.
+### 2.1 Pytest - Jedinični testovi
 
-**Korišćenje**: Napisano 9 novih unit testova koji pokrivaju modul `traceback.py`:
+**Opis:** Framework za pisanje i pokretanje jediničnih testova u Python-u.
 
-**test_iter_syntax_lines_multiline.py** (1 test)
-Cilj: Testiranje funkcije `_iter_syntax_lines` za slučaj kada greška obuhvata više linija koda.
-Pokriveni scenariji:
-- `test_iter_syntax_lines_multiline` - Provera ispravnog označavanja opsega greške kroz više linija (prva, srednja i poslednja linija)
+**Korišćenje:** Napisano 25 novih unit testova koji pokrivaju:
 
-**test_exception_group_traceback.py** (1 test)
-Cilj: Testiranje ekstrakcije traceback-a za `ExceptionGroup` (Python 3.11+).
-Pokriveni scenariji:
-- `test_exception_group_traceback` - Provera ispravnog rukovanja sa više exception-a bačenih odjednom kroz `ExceptionGroup`
+#### traceback.py (9 testova)
 
-**test_safe_str_with_broken_str.py** (1 test)
-Cilj: Testiranje otpornosti `safe_str` funkcije kada `__str__` metoda objekta baca exception.
-Pokriveni scenariji:
-- `test_safe_str_with_broken_str` - Provera da `Traceback.extract` ne pada kada exception objekat ima pokvarenu `__str__` metodu
+**Cilj:** Testiranje `rich.traceback` modula — konstrukcija traceback objekata, filtriranje lokalnih promenljivih i interne helper funkcije
 
-**test_stack_defaults.py** (1 test)
-Cilj: Testiranje ispravnih default vrednosti `Stack` dataclass-a.
-Pokriveni scenariji:
-- `test_stack_defaults` - Provera da se `Stack` kreira sa ispravnim default vrednostima (`is_group=False`, `frames=[]`, `exceptions=[]`)
+**Pokriveni scenariji:**
 
-**test_frame_creation.py** (1 test)
-Cilj: Testiranje ispravnog kreiranja `Frame` dataclass-a.
-Pokriveni scenariji:
-- `test_frame_creation` - Provera da se `Frame` kreira sa ispravnim default vrednostima (`locals=None`, `last_instruction=None`)
-
-**test_from_exception.py** (1 test)
-Cilj: Testiranje alternativnog načina kreiranja `Traceback` objekta.
-Pokriveni scenariji:
-- `test_from_exception` - Provera da `Traceback.from_exception()` ispravno kreira objekat iz exception informacija
-
-**test_get_locals.py** (1 test)
-Cilj: Testiranje filtriranja lokalnih promenljivih u traceback-u.
-Pokriveni scenariji:
-- `test_get_locals_hide_dunder` - Provera da se promenljive sa `__` prefiksom preskačaju kada je `locals_hide_dunder=True`
-
-**test_get_locals_show_all.py** (1 test)
-Cilj: Testiranje prikaza svih lokalnih promenljivih bez filtriranja.
-Pokriveni scenariji:
-- `test_get_locals_show_all` - Provera da se sve promenljive prikazuju kada su `locals_hide_dunder=False` i `locals_hide_sunder=False`
-
-**test_get_locals_hide_sunder.py** (1 test)
-Cilj: Testiranje filtriranja promenljivih sa `_` prefiksom.
-Pokriveni scenariji:
-- `test_get_locals_hide_sunder` - Provera da se promenljive sa `_` prefiksom preskačaju kada je `locals_hide_sunder=True`
-
-
+* `test_frame_creation` - kreiranje `Frame`-a i verifikacija default vrednosti (`line=""`, `locals=None`, `last_instruction=None`)
+* `test_stack_defaults` - default vrednosti `Stack`-a (`is_group=False`, prazne liste, `syntax_error=None`)
+* `test_from_exception` - kreiranje traceback-a preko `Traceback.from_exception()` iz uhvaćenog izuzetka
+* `test_exception_group_traceback` - rukovanje `ExceptionGroup`-om (Python 3.11+, sa `pytest.skip` na starijim verzijama)
+* `test_safe_str_with_broken_str` - robustnost kada objekat ima `__str__` koji baca `RuntimeError`
+* `test_get_locals_hide_dunder` - filtriranje dunder promenljivih (`locals_hide_dunder=True`)
+* `test_get_locals_hide_sunder` - filtriranje sunder promenljivih (`locals_hide_sunder=True`)
+* `test_get_locals_show_all` - prikaz svih lokalnih promenljivih (oba flaga `False`)
+* `test_iter_syntax_lines_multiline` - `_iter_syntax_lines` vraća tačan niz tuple-ova za višelinijski opseg
