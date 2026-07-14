@@ -1,0 +1,89 @@
+Mypy Type Check Coverage Summary
+================================
+
+Script: index
+
++------------------------+-------------------+-----------+
+| Module                 | Imprecision       | Lines     |
++------------------------+-------------------+-----------+
+| rich                   |   7.91% imprecise |   177 LOC |
+| rich.__main__          |   3.27% imprecise |   245 LOC |
+| rich._cell_widths      |   0.00% imprecise |   454 LOC |
+| rich._emoji_codes      |   0.00% imprecise |  3610 LOC |
+| rich._emoji_replace    |   0.00% imprecise |    32 LOC |
+| rich._export_format    |   0.00% imprecise |    76 LOC |
+| rich._extension        |  10.00% imprecise |    10 LOC |
+| rich._fileno           |   4.17% imprecise |    24 LOC |
+| rich._inspect          |  16.04% imprecise |   268 LOC |
+| rich._log_render       |   2.13% imprecise |    94 LOC |
+| rich._loop             |  46.51% imprecise |    43 LOC |
+| rich._null_file        |   0.00% imprecise |    69 LOC |
+| rich._palettes         |   0.00% imprecise |   309 LOC |
+| rich._pick             |   0.00% imprecise |    17 LOC |
+| rich._ratio            |   0.00% imprecise |   153 LOC |
+| rich._spinners         |   0.00% imprecise |   482 LOC |
+| rich._stack            |  25.00% imprecise |    16 LOC |
+| rich._timer            |   0.00% imprecise |    19 LOC |
+| rich._win32_console    |   0.15% imprecise |   661 LOC |
+| rich._windows          |   2.82% imprecise |    71 LOC |
+| rich._windows_renderer |   0.00% imprecise |    56 LOC |
+| rich._wrap             |   3.23% imprecise |    93 LOC |
+| rich.abc               |   0.00% imprecise |    33 LOC |
+| rich.align             |   0.33% imprecise |   306 LOC |
+| rich.ansi              |   0.41% imprecise |   241 LOC |
+| rich.bar               |   0.00% imprecise |    93 LOC |
+| rich.box               |   0.63% imprecise |   474 LOC |
+| rich.cells             |   0.00% imprecise |   174 LOC |
+| rich.color             |   0.16% imprecise |   621 LOC |
+| rich.color_triplet     |   0.00% imprecise |    38 LOC |
+| rich.columns           |   8.56% imprecise |   187 LOC |
+| rich.console           |   2.57% imprecise |  2680 LOC |
+| rich.constrain         |   0.00% imprecise |    37 LOC |
+| rich.containers        |   1.80% imprecise |   167 LOC |
+| rich.control           |   0.91% imprecise |   219 LOC |
+| rich.default_styles    |   1.04% imprecise |   193 LOC |
+| rich.diagnose          |  10.26% imprecise |    39 LOC |
+| rich.emoji             |   1.10% imprecise |    91 LOC |
+| rich.errors            |   0.00% imprecise |    34 LOC |
+| rich.file_proxy        |   7.02% imprecise |    57 LOC |
+| rich.filesize          |   6.82% imprecise |    88 LOC |
+| rich.highlighter       |   8.62% imprecise |   232 LOC |
+| rich.json              |   7.91% imprecise |   139 LOC |
+| rich.jupyter           |   5.94% imprecise |   101 LOC |
+| rich.layout            |   0.68% imprecise |   442 LOC |
+| rich.live              |   4.75% imprecise |   400 LOC |
+| rich.live_render       |   0.00% imprecise |   106 LOC |
+| rich.logging           |   2.36% imprecise |   297 LOC |
+| rich.markdown          |   2.31% imprecise |   779 LOC |
+| rich.markup            |   3.19% imprecise |   251 LOC |
+| rich.measure           |   1.32% imprecise |   151 LOC |
+| rich.padding           |   0.71% imprecise |   141 LOC |
+| rich.pager             |  11.76% imprecise |    34 LOC |
+| rich.palette           |   1.00% imprecise |   100 LOC |
+| rich.panel             |   0.32% imprecise |   317 LOC |
+| rich.pretty            |  15.85% imprecise |  1016 LOC |
+| rich.progress          |   1.81% imprecise |  1715 LOC |
+| rich.progress_bar      |   0.45% imprecise |   223 LOC |
+| rich.prompt            |  16.00% imprecise |   400 LOC |
+| rich.protocol          |  14.29% imprecise |    42 LOC |
+| rich.region            |   0.00% imprecise |    10 LOC |
+| rich.repr              |  23.49% imprecise |   149 LOC |
+| rich.rule              |   1.54% imprecise |   130 LOC |
+| rich.scope             |   9.30% imprecise |    86 LOC |
+| rich.screen            |   0.00% imprecise |    54 LOC |
+| rich.segment           |   1.33% imprecise |   752 LOC |
+| rich.spinner           |   0.00% imprecise |   132 LOC |
+| rich.status            |   3.05% imprecise |   131 LOC |
+| rich.style             |   3.16% imprecise |   792 LOC |
+| rich.styled            |   2.38% imprecise |    42 LOC |
+| rich.syntax            |  15.43% imprecise |   985 LOC |
+| rich.table             |   0.99% imprecise |  1006 LOC |
+| rich.terminal_theme    |   0.00% imprecise |   153 LOC |
+| rich.text              |   1.40% imprecise |  1361 LOC |
+| rich.theme             |   0.00% imprecise |   115 LOC |
+| rich.themes            |   0.00% imprecise |     5 LOC |
+| rich.traceback         |   8.23% imprecise |   899 LOC |
+| rich.tree              |   0.78% imprecise |   257 LOC |
++------------------------+-------------------+-----------+
+| Total                  |   3.44% imprecise | 26696 LOC |
++------------------------+-------------------+-----------+

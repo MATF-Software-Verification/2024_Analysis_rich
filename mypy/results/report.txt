@@ -1,0 +1,4 @@
+rich/console.py:1540: error: Redundant cast to "Literal['left', 'center', 'right']"  [redundant-cast]
+Generated HTML report (via XSLT): /home/vojan/Desktop/2024_Analysis_rich/mypy/results/index.html
+Generated TXT report (via XSLT): /home/vojan/Desktop/2024_Analysis_rich/mypy/results/index.txt
+Found 1 error in 1 file (checked 78 source files)
