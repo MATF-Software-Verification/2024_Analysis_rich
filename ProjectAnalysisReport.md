@@ -105,3 +105,38 @@ pytest tests/ -v
 **Rezultati:**
 
 * Svi testovi prolaze: 100% pass rate
+
+
+### 2.2 Coverage.py - Pokrivenost koda
+
+**Opis:** Alat za merenje pokrivenosti koda testovima - procenat koda izvršen tokom testiranja.
+
+**Rezultati:**
+
+Baseline coverage (samo originalni Rich testovi):
+
+```bash
+pytest tests/ --cov=rich --cov-report=term-missing --cov-report=html
+```
+
+```bash
+Total Statements:    8166
+Missed Statements:    435
+Overall Coverage:     94.67% (95%)
+```
+
+Final coverage (originalni + naši testovi):
+
+```bash
+pytest tests/ ~/Desktop/2024_Analysis_rich/tests \
+  --cov=rich \
+  --cov-report=term-missing \
+  --cov-report=html
+```
+
+```bash
+Total Statements:    8166
+Missed Statements:    411
+Overall Coverage:     94.97% (95%)
+Change:               +24 pokrivenih linija (+0.3%)
+```
