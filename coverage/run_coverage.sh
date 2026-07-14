@@ -1,28 +1,27 @@
 #!/bin/bash
 
-cd "$(dirname "$0")/.."
+# Putanje do projekta i test foldera
+RICH_DIR="$HOME/Desktop/rich"
+NEW_TESTS="$HOME/Desktop/2024_Analysis_rich/tests"
+RESULTS_DIR="$(dirname "$0")/results"
 
-# Kreiranje foldera za rezultate
-mkdir -p coverage/results
+mkdir -p "$RESULTS_DIR"
+
+cd "$RICH_DIR"
 
 echo "========================================="
-echo "Running Pytest with Coverage for Rich"
-echo "Using original Rich library tests"
-echo "========================================="
-echo ""
-
-# Pokretanje Pytest sa testovima iz spoljnog rich repoa
-pytest ../rich/tests/ \
-    --cov=../rich/rich \
-    --cov-report=term \
-    --cov-report=html:coverage/results/html \
-    2>&1 | tee coverage/results/report.txt
-
-echo ""
-echo "========================================="
-echo "Pytest complete!"
+echo "Running Coverage (original + new tests)"
 echo "========================================="
 echo ""
-echo "Reports saved to:"
+echo "Running tests with coverage..."
+pytest tests/ "$NEW_TESTS" \
+  --cov=rich \
+  --cov-report=term \
+  2>&1 | tee "$RESULTS_DIR/report.txt"
+echo ""
+echo "========================================="
+echo "Coverage complete!"
+echo "========================================="
+echo ""
+echo "Report saved to:"
 echo "   - coverage/results/report.txt"
-echo "   - coverage/results/html/index.html"
