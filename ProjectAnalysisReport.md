@@ -154,7 +154,7 @@ Change:               +24 pokrivenih linija (+0.3%)
 Dodavanjem 25 testova pokriveno je 24 novih linija koda (nepokrivene statements pale sa 435 na 411), pri čemu ukupna pokrivenost projekta ostaje na visokih 95%. Najznačajniji napredak je u modulu `traceback.py` koji je porastao sa 88% na 93% (+5 procentnih poena), što direktno odražava nove testove koji pokrivaju konstrukciju traceback objekata i filtriranje lokalnih promenljivih. Modul `live.py` porastao je sa 96% na 98% (+2 poena), a `progress.py` sa 92% na 93% (+1 poen).
 
 
-### 3.4 MyPy - Type checking
+### 2.3 MyPy - Type checking
 
 **Opis:** Statički type checker za Python koji proverava type hints i detektuje type safety probleme.
 
@@ -232,5 +232,94 @@ Detektovana je 1 type greška — `redundant-cast` u `console.py` (linija 1540),
 **Analiza:**
 
 Za terminal rendering biblioteku koja mora da rukuje ANSI escape sekvencama, cross-platform konzolnim izlazom (Windows/Unix), dinamičkim pretty-printing-om proizvoljnih Python objekata i integracijom sa eksternim lexerima, rezultat od 96.56% type precision je izvanredan i pokazuje production-grade type safety. Preostala nepreciznost je logično locirana u modulima koji po svojoj prirodi rade sa dinamičkim ili introspektivnim tipovima.
+
+### 3.6 Radon - Code complexity
+
+**Opis:** Alat za analizu ciklomatske kompleksnosti i indeksa održivosti (maintainability index) Python koda.
+
+**Korišćenje:**
+
+```bash
+radon cc rich/ -a -s
+radon mi rich/ -s
+radon raw rich/ -s
+```
+
+**Rezultati:**
+
+**Ciklomatska kompleksnost:**
+
+Prosečna kompleksnost: A (3.24) — analizirano 1027 blokova (klase, funkcije, metode)
+
+Ocene kompleksnosti:
+
+* A (1-5): Nizak rizik
+* B (6-10): Umeren rizik
+* C (11-20): Visok rizik
+* D (21-30): Vrlo visok rizik
+* E (31-40): Ekstremno visok rizik
+* F (>40): Kritičan rizik
+
+Distribucija kompleksnosti:
+
+| Grade | Range | Count | Percent |
+|-------|-------|-------|---------|
+| A | 1-5 | 882 | 85.9% |
+| B | 6-10 | 93 | 9.1% |
+| C | 11-20 | 37 | 3.6% |
+| D | 21-30 | 9 | 0.9% |
+| E | 31-40 | 4 | 0.4% |
+| F | >40 | 2 | 0.2% |
+
+Top 10 najkompleksnijih funkcija:
+
+* `Style.__init__` - F (49) - style.py
+* `Table._render` - F (49) - table.py
+* `Style.__str__` - E (35) - style.py
+* `Traceback.extract` - E (34) - traceback.py
+* `Markdown.__rich_console__` - E (33) - markdown.py
+* `Console.__init__` - E (32) - console.py
+* `Table._calculate_column_widths` - D (29) - table.py
+* `Inspect._render` - D (28) - _inspect.py
+* `Syntax._get_syntax` - D (26) - syntax.py
+* `Tree.__rich_console__` - D (23) - tree.py
+
+**Indeks održivosti po modulima:**
+
+Najbolji moduli (MI = 100.00, A):
+
+* `_emoji_codes.py`, `_spinners.py`, `_palettes.py`, `_cell_widths.py` (veliki data moduli)
+* `errors.py`, `region.py`, `themes.py`, `_loop.py`, `_pick.py`, `_extension.py`
+
+Za poboljšanje (najniži MI):
+
+* `console.py` - 0.00 (C) - artefakt velikog fajla (2.680 LOC)
+* `text.py` - 6.43 (C) - veliki modul (1.361 LOC)
+* `progress.py` - 8.90 (C) - veliki modul (1.715 LOC)
+* `markdown.py` - 19.92 (A)
+* `syntax.py` - 27.16 (A)
+
+Testirani moduli:
+
+* `panel.py` - MI 48.10 (A)
+* `live.py` - MI 36.71 (A)
+* `traceback.py` - MI 29.93 (A)
+* `table.py` - MI 14.80 (B)
+* `progress.py` - MI 8.90 (C)
+
+**Raw metrike:**
+
+| Metrika | Vrednost |
+|---------|----------|
+| LOC (ukupno linija) | 26.696 |
+| SLOC (linije koda) | 19.999 |
+| LLOC (logičke linije) | 10.655 |
+| Komentari + docstring-ovi | 12% linija |
+
+**Analiza:**
+
+Rich demonstrira odličan balans između funkcionalnosti i održivosti sa prosečnom kompleksnošću od 3.24 i 85.9% funkcija sa ocenom A (nizak rizik). Preostala kompleksnost je koncentrisana u očekivanim mestima za rendering biblioteku — u `__rich_console__` render metodama, konstruktorima velikih klasa (`Style`, `Console`, `Table`) i logici za parsiranje (markup, ANSI, sintaksa).
+
+Niži indeks održivosti kod `console.py`, `text.py` i `progress.py` nije posledica lošeg koda već veličine fajlova — maintainability index oštro kažnjava velike module, a ta tri fajla su najveća u projektu (2.680, 1.361 i 1.715 LOC). Udeo komentara i docstring-ova od 12% pokazuje da je kod dokumentovan prevashodno kroz docstring-ove (2.896 linija), a ne kroz inline komentare.
 
 
