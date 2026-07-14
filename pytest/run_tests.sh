@@ -1,15 +1,14 @@
 #!/bin/bash
 cd "$(dirname "$0")/.."
 
+mkdir -p pytest/results
+
 echo "========================================="
 echo "Running Pytest unit tests"
 echo "========================================="
 echo ""
-
 echo "Running unit tests..."
-
 pytest tests/ -v 2>&1 | tee pytest/results/report.txt
-
 echo ""
 echo "========================================="
 echo "Pytest complete!"
