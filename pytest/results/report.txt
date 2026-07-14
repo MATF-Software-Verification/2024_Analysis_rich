@@ -1,11 +1,33 @@
-============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/solomon/Desktop/2024_Analysis_rich/venv/bin/python3
-cachedir: .pytest_cache
-rootdir: /home/solomon/Desktop/2024_Analysis_rich
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/vojan/Desktop/2024_Analysis_rich/tests
 plugins: cov-7.0.0
-collecting ... collected 2 items
+collected 25 items                                                     
 
-tests/test_json_custom.py::test_json_rendering_basic PASSED              [ 50%]
-tests/test_progress_unit.py::test_progress_percent_completion PASSED     [100%]
+test_add_task.py .                                               [  4%]
+test_exception_group_traceback.py .                              [  8%]
+test_frame_creation.py .                                         [ 12%]
+test_from_exception.py .                                         [ 16%]
+test_get_locals_hide_dunder.py .                                 [ 20%]
+test_get_locals_hide_sunder.py .                                 [ 24%]
+test_get_locals_show_all.py .                                    [ 28%]
+test_iter_syntax_lines_multiline.py .                            [ 32%]
+test_live_auto_refresh_false.py .                                [ 36%]
+test_live_creation.py .                                          [ 40%]
+test_live_is_started.py .                                        [ 44%]
+test_live_nested.py .                                            [ 48%]
+test_live_update.py .                                            [ 52%]
+test_panel_creation.py .                                         [ 56%]
+test_panel_fit.py .                                              [ 60%]
+test_panel_with_title.py .                                       [ 64%]
+test_progress_creation.py .                                      [ 68%]
+test_reader_next.py .                                            [ 72%]
+test_safe_str_with_broken_str.py .                               [ 76%]
+test_stack_defaults.py .                                         [ 80%]
+test_table_add_column_and_row.py .                               [ 84%]
+test_table_grid.py .                                             [ 88%]
+test_task_defaults.py .                                          [ 92%]
+test_task_percentage.py .                                        [ 96%]
+test_track_thread.py .                                           [100%]
 
-============================== 2 passed in 0.26s ===============================
+========================== 25 passed in 0.48s ==========================
+
