@@ -1,0 +1,2138 @@
+=========================================
+CYCLOMATIC COMPLEXITY (radon cc -a -s)
+=========================================
+rich/json.py
+    C 9:0 JSON - A (3)
+    M 25:4 JSON.__init__ - A (2)
+    M 54:4 JSON.from_data - A (2)
+    M 101:4 JSON.__rich__ - A (1)
+rich/style.py
+    M 127:4 Style.__init__ - F (49)
+    M 290:4 Style.__str__ - E (35)
+    M 340:4 Style._make_ansi_codes - C (15)
+    M 494:4 Style.parse - C (13)
+    M 560:4 Style.get_html_style - C (12)
+    M 729:4 Style._add - C (11)
+    M 690:4 Style.render - B (7)
+    C 36:0 Style - B (6)
+    C 21:0 _Bit - A (3)
+    M 254:4 Style.on - A (3)
+    M 401:4 Style.pick_first - A (3)
+    M 474:4 Style.without_color - A (3)
+    M 622:4 Style.copy - A (3)
+    M 29:4 _Bit.__get__ - A (2)
+    M 209:4 Style.from_color - A (2)
+    M 385:4 Style.normalize - A (2)
+    M 408:4 Style.__rich_repr__ - A (2)
+    M 427:4 Style.__eq__ - A (2)
+    M 432:4 Style.__ne__ - A (2)
+    M 437:4 Style.__hash__ - A (2)
+    M 459:4 Style.transparent_background - A (2)
+    M 469:4 Style.meta - A (2)
+    M 645:4 Style.clear_meta_and_links - A (2)
+    M 667:4 Style.update_link - A (2)
+    M 716:4 Style.test - A (2)
+    M 753:4 Style.__add__ - A (2)
+    C 761:0 StyleStack - A (2)
+    M 26:4 _Bit.__init__ - A (1)
+    M 204:4 Style.null - A (1)
+    M 233:4 Style.from_meta - A (1)
+    M 286:4 Style.link_id - A (1)
+    M 336:4 Style.__bool__ - A (1)
+    M 444:4 Style.color - A (1)
+    M 449:4 Style.bgcolor - A (1)
+    M 454:4 Style.link - A (1)
+    M 464:4 Style.background_style - A (1)
+    M 597:4 Style.combine - A (1)
+    M 610:4 Style.chain - A (1)
+    M 766:4 StyleStack.__init__ - A (1)
+    M 769:4 StyleStack.__repr__ - A (1)
+    M 773:4 StyleStack.current - A (1)
+    M 777:4 StyleStack.push - A (1)
+    M 785:4 StyleStack.pop - A (1)
+rich/columns.py
+    M 62:4 Columns.__rich_console__ - D (21)
+    C 16:0 Columns - B (9)
+    M 31:4 Columns.__init__ - A (2)
+    M 54:4 Columns.add_renderable - A (1)
+rich/_emoji_replace.py
+    F 12:0 _emoji_replace - A (2)
+rich/containers.py
+    M 111:4 Lines.justify - C (17)
+    M 46:4 Renderables.__rich_measure__ - A (5)
+    C 30:0 Renderables - A (3)
+    C 66:0 Lines - A (3)
+    M 33:4 Renderables.__init__ - A (2)
+    M 40:4 Renderables.__rich_console__ - A (1)
+    M 59:4 Renderables.append - A (1)
+    M 62:4 Renderables.__iter__ - A (1)
+    M 69:4 Lines.__init__ - A (1)
+    M 72:4 Lines.__repr__ - A (1)
+    M 75:4 Lines.__iter__ - A (1)
+    M 79:4 Lines.__getitem__ - A (1)
+    M 83:4 Lines.__getitem__ - A (1)
+    M 86:4 Lines.__getitem__ - A (1)
+    M 89:4 Lines.__setitem__ - A (1)
+    M 93:4 Lines.__len__ - A (1)
+    M 96:4 Lines.__rich_console__ - A (1)
+    M 102:4 Lines.append - A (1)
+    M 105:4 Lines.extend - A (1)
+    M 108:4 Lines.pop - A (1)
+rich/__init__.py
+    F 120:0 inspect - A (5)
+    F 23:0 get_console - A (2)
+    F 53:0 print - A (2)
+    F 39:0 reconfigure - A (1)
+    F 77:0 print_json - A (1)
+rich/logging.py
+    M 132:4 RichHandler.emit - C (11)
+    C 18:0 RichHandler - B (6)
+    M 182:4 RichHandler.render_message - A (5)
+    M 207:4 RichHandler.render - A (4)
+    M 65:4 RichHandler.__init__ - A (3)
+    F 283:4 divide - A (2)
+    M 117:4 RichHandler.get_level_text - A (1)
+rich/protocol.py
+    F 19:0 rich_cast - A (5)
+    F 10:0 is_renderable - A (3)
+rich/_extension.py
+    F 4:0 load_ipython_extension - A (1)
+rich/bar.py
+    M 48:4 Bar.__rich_console__ - A (5)
+    C 17:0 Bar - A (3)
+    M 86:4 Bar.__rich_measure__ - A (2)
+    M 29:4 Bar.__init__ - A (1)
+    M 45:4 Bar.__repr__ - A (1)
+rich/panel.py
+    M 141:4 Panel.__rich_console__ - C (16)
+    C 17:0 Panel - A (5)
+    M 110:4 Panel._title - A (3)
+    M 126:4 Panel._subtitle - A (3)
+    M 277:4 Panel.__rich_measure__ - A (3)
+    M 40:4 Panel.__init__ - A (1)
+    M 74:4 Panel.fit - A (1)
+rich/_timer.py
+    F 13:0 timer - A (1)
+rich/table.py
+    M 747:4 Table._render - F (49)
+    M 523:4 Table._calculate_column_widths - D (29)
+    M 588:4 Table._collapse_widths - C (14)
+    M 626:4 Table._get_cells - C (12)
+    C 154:0 Table - B (9)
+    M 707:4 Table._measure_column - B (8)
+    M 321:4 Table.__rich_measure__ - B (7)
+    M 423:4 Table.add_row - B (7)
+    M 189:4 Table.__init__ - B (6)
+    M 365:4 Table.add_column - A (5)
+    M 476:4 Table.__rich_console__ - A (5)
+    M 297:4 Table._extra_width - A (4)
+    M 311:4 Table.get_row_style - A (3)
+    M 699:4 Table._get_padding_width - A (3)
+    C 39:0 Column - A (2)
+    M 287:4 Table.expand - A (2)
+    M 470:4 Table.add_section - A (2)
+    F 967:8 header - A (1)
+    M 117:4 Column.copy - A (1)
+    M 122:4 Column.cells - A (1)
+    M 127:4 Column.flexible - A (1)
+    C 133:0 Row - A (1)
+    C 143:0 _Cell - A (1)
+    M 254:4 Table.grid - A (1)
+    M 292:4 Table.expand - A (1)
+    M 307:4 Table.row_count - A (1)
+    M 355:4 Table.padding - A (1)
+    M 360:4 Table.padding - A (1)
+rich/_log_render.py
+    M 32:4 LogRender.__call__ - C (17)
+    C 14:0 LogRender - B (10)
+    M 15:4 LogRender.__init__ - A (1)
+rich/layout.py
+    M 395:4 Layout.__rich_console__ - B (7)
+    M 261:4 Layout.split - A (5)
+    M 345:4 Layout._make_region_map - A (5)
+    M 366:4 Layout.render - A (5)
+    M 198:4 Layout.get - A (4)
+    C 51:0 _Placeholder - A (3)
+    M 60:4 _Placeholder.__rich_console__ - A (3)
+    C 101:0 RowSplitter - A (3)
+    C 121:0 ColumnSplitter - A (3)
+    C 142:0 Layout - A (3)
+    M 189:4 Layout.children - A (3)
+    M 286:4 Layout.add_split - A (3)
+    C 80:0 Splitter - A (2)
+    M 109:4 RowSplitter.divide - A (2)
+    M 129:4 ColumnSplitter.divide - A (2)
+    M 156:4 Layout.__init__ - A (2)
+    M 184:4 Layout.renderable - A (2)
+    M 216:4 Layout.__getitem__ - A (2)
+    C 32:0 LayoutRender - A (1)
+    C 43:0 LayoutError - A (1)
+    C 47:0 NoSplitter - A (1)
+    M 56:4 _Placeholder.__init__ - A (1)
+    M 86:4 Splitter.get_tree_icon - A (1)
+    M 90:4 Splitter.divide - A (1)
+    M 106:4 RowSplitter.get_tree_icon - A (1)
+    M 126:4 ColumnSplitter.get_tree_icon - A (1)
+    M 177:4 Layout.__rich_repr__ - A (1)
+    M 194:4 Layout.map - A (1)
+    M 223:4 Layout.tree - A (1)
+    M 299:4 Layout.split_row - A (1)
+    M 307:4 Layout.split_column - A (1)
+    M 315:4 Layout.unsplit - A (1)
+    M 319:4 Layout.update - A (1)
+    M 328:4 Layout.refresh_screen - A (1)
+rich/diagnose.py
+    F 10:0 report - A (2)
+rich/errors.py
+    C 1:0 ConsoleError - A (1)
+    C 5:0 StyleError - A (1)
+    C 9:0 StyleSyntaxError - A (1)
+    C 13:0 MissingStyle - A (1)
+    C 17:0 StyleStackError - A (1)
+    C 21:0 NotRenderableError - A (1)
+    C 25:0 MarkupError - A (1)
+    C 29:0 LiveError - A (1)
+    C 33:0 NoAltScreen - A (1)
+rich/screen.py
+    M 40:4 Screen.__rich_console__ - B (6)
+    C 18:0 Screen - A (5)
+    M 28:4 Screen.__init__ - A (1)
+rich/status.py
+    M 53:4 Status.update - A (5)
+    C 11:0 Status - A (2)
+    M 23:4 Status.__init__ - A (1)
+    M 45:4 Status.renderable - A (1)
+    M 49:4 Status.console - A (1)
+    M 85:4 Status.start - A (1)
+    M 89:4 Status.stop - A (1)
+    M 93:4 Status.__rich__ - A (1)
+    M 96:4 Status.__enter__ - A (1)
+    M 100:4 Status.__exit__ - A (1)
+rich/scope.py
+    F 14:0 render_scope - A (4)
+    F 75:4 test - A (1)
+rich/measure.py
+    M 79:4 Measurement.get - B (6)
+    F 125:0 measure_renderables - A (3)
+    C 11:0 Measurement - A (3)
+    M 59:4 Measurement.clamp - A (3)
+    M 20:4 Measurement.span - A (1)
+    M 24:4 Measurement.normalize - A (1)
+    M 34:4 Measurement.with_maximum - A (1)
+    M 46:4 Measurement.with_minimum - A (1)
+rich/cells.py
+    F 96:0 set_cell_size - C (11)
+    F 68:0 get_character_cell_size - B (6)
+    F 131:0 chop_cells - A (4)
+    F 51:0 cell_len - A (3)
+    F 34:0 cached_cell_len - A (2)
+rich/live.py
+    M 145:4 Live.stop - C (15)
+    M 240:4 Live.refresh - C (11)
+    M 111:4 Live.start - B (7)
+    M 191:4 Live._enable_redirect_io - B (7)
+    C 41:0 Live - B (6)
+    M 211:4 Live.renderable - A (5)
+    M 274:4 Live.process_renderables - A (5)
+    M 57:4 Live.__init__ - A (4)
+    C 22:0 _RefreshThread - A (3)
+    M 34:4 _RefreshThread.run - A (3)
+    M 103:4 Live.get_renderable - A (3)
+    M 201:4 Live._disable_redirect_io - A (3)
+    M 226:4 Live.update - A (3)
+    M 25:4 _RefreshThread.__init__ - A (1)
+    M 31:4 _RefreshThread.stop - A (1)
+    M 99:4 Live.is_started - A (1)
+    M 179:4 Live.__enter__ - A (1)
+    M 183:4 Live.__exit__ - A (1)
+rich/_windows_renderer.py
+    F 7:0 legacy_windows_render - C (20)
+rich/filesize.py
+    F 18:0 _to_str - A (5)
+    F 43:0 pick_unit_and_suffix - A (3)
+    F 52:0 decimal - A (1)
+rich/segment.py
+    M 602:4 Segment.divide - C (13)
+    M 111:4 Segment._split_cells - B (9)
+    M 279:4 Segment.split_and_crop_lines - B (9)
+    M 190:4 Segment.apply_style - B (8)
+    M 250:4 Segment.split_lines - B (8)
+    M 326:4 Segment.adjust_line_length - B (8)
+    C 64:0 Segment - A (5)
+    M 398:4 Segment.set_shape - A (5)
+    M 523:4 Segment.simplify - A (5)
+    M 550:4 Segment.strip_links - A (5)
+    M 158:4 Segment.split_cells - A (4)
+    M 580:4 Segment.remove_color - A (4)
+    C 696:0 SegmentLines - A (4)
+    M 708:4 SegmentLines.__rich_console__ - A (4)
+    M 91:4 Segment.__rich_repr__ - A (3)
+    M 371:4 Segment.get_line_length - A (3)
+    M 384:4 Segment.get_shape - A (3)
+    M 434:4 Segment.align_top - A (3)
+    M 463:4 Segment.align_bottom - A (3)
+    M 492:4 Segment.align_middle - A (3)
+    C 671:0 Segments - A (3)
+    M 684:4 Segments.__rich_console__ - A (3)
+    M 82:4 Segment.cell_length - A (2)
+    M 231:4 Segment.filter_control - A (2)
+    M 567:4 Segment.strip_styles - A (2)
+    C 35:0 ControlType - A (1)
+    M 100:4 Segment.__bool__ - A (1)
+    M 105:4 Segment.is_control - A (1)
+    M 185:4 Segment.line - A (1)
+    M 680:4 Segments.__init__ - A (1)
+    M 697:4 SegmentLines.__init__ - A (1)
+rich/progress.py
+    M 1416:4 Progress.update - C (14)
+    M 1310:4 Progress.open - B (10)
+    M 793:4 TimeRemainingColumn.render - B (8)
+    M 756:4 TaskProgressColumn.render - B (7)
+    M 1191:4 Progress.track - B (7)
+    M 1516:4 Progress.advance - B (7)
+    M 1561:4 Progress.make_tasks_table - B (7)
+    M 521:4 ProgressColumn.__call__ - B (6)
+    C 772:0 TimeRemainingColumn - B (6)
+    M 1477:4 Progress.reset - B (6)
+    M 878:4 DownloadColumn.render - A (5)
+    M 1023:4 Task.speed - A (5)
+    M 1077:4 Progress.__init__ - A (5)
+    M 1236:4 Progress.wrap_file - A (5)
+    M 76:4 _TrackThread.run - A (4)
+    C 616:0 TextColumn - A (4)
+    C 688:0 TimeElapsedColumn - A (4)
+    C 700:0 TaskProgressColumn - A (4)
+    C 865:0 DownloadColumn - A (4)
+    C 914:0 TransferSpeedColumn - A (4)
+    M 1041:4 Task.time_remaining - A (4)
+    C 1061:0 Progress - A (4)
+    F 104:0 track - A (3)
+    F 306:0 wrap_file - A (3)
+    F 421:0 open - A (3)
+    C 64:0 _TrackThread - A (3)
+    C 507:0 ProgressColumn - A (3)
+    C 566:0 SpinnerColumn - A (3)
+    M 635:4 TextColumn.render - A (3)
+    C 646:0 BarColumn - A (3)
+    M 673:4 BarColumn.render - A (3)
+    M 691:4 TimeElapsedColumn.render - A (3)
+    C 829:0 TotalFileSizeColumn - A (3)
+    C 838:0 MofNCompleteColumn - A (3)
+    M 917:4 TransferSpeedColumn.render - A (3)
+    C 936:0 Task - A (3)
+    M 1000:4 Task.elapsed - A (3)
+    M 1161:4 Progress.finished - A (3)
+    M 1173:4 Progress.stop - A (3)
+    M 1546:4 Progress.refresh - A (3)
+    C 182:0 _Reader - A (2)
+    M 265:4 _Reader.close - A (2)
+    C 285:0 _ReadContext - A (2)
+    M 517:4 ProgressColumn.get_table_column - A (2)
+    C 549:0 RenderableColumn - A (2)
+    M 576:4 SpinnerColumn.__init__ - A (2)
+    M 607:4 SpinnerColumn.render - A (2)
+    M 619:4 TextColumn.__init__ - A (2)
+    M 737:4 TaskProgressColumn.render_speed - A (2)
+    C 820:0 FileSizeColumn - A (2)
+    M 832:4 TotalFileSizeColumn.render - A (2)
+    M 854:4 MofNCompleteColumn.render - A (2)
+    M 993:4 Task.remaining - A (2)
+    M 1014:4 Task.percentage - A (2)
+    M 1168:4 Progress.start - A (2)
+    M 1387:4 Progress.start_task - A (2)
+    M 1401:4 Progress.stop_task - A (2)
+    M 1599:4 Progress.add_task - A (2)
+    F 372:0 open - A (1)
+    F 397:0 open - A (1)
+    M 67:4 _TrackThread.__init__ - A (1)
+    M 90:4 _TrackThread.__enter__ - A (1)
+    M 94:4 _TrackThread.__exit__ - A (1)
+    M 185:4 _Reader.__init__ - A (1)
+    M 198:4 _Reader.__enter__ - A (1)
+    M 202:4 _Reader.__exit__ - A (1)
+    M 210:4 _Reader.__iter__ - A (1)
+    M 213:4 _Reader.__next__ - A (1)
+    M 219:4 _Reader.closed - A (1)
+    M 222:4 _Reader.fileno - A (1)
+    M 225:4 _Reader.isatty - A (1)
+    M 229:4 _Reader.mode - A (1)
+    M 233:4 _Reader.name - A (1)
+    M 236:4 _Reader.readable - A (1)
+    M 239:4 _Reader.seekable - A (1)
+    M 242:4 _Reader.writable - A (1)
+    M 245:4 _Reader.read - A (1)
+    M 250:4 _Reader.readinto - A (1)
+    M 255:4 _Reader.readline - A (1)
+    M 260:4 _Reader.readlines - A (1)
+    M 270:4 _Reader.seek - A (1)
+    M 275:4 _Reader.tell - A (1)
+    M 278:4 _Reader.write - A (1)
+    M 281:4 _Reader.writelines - A (1)
+    M 288:4 _ReadContext.__init__ - A (1)
+    M 292:4 _ReadContext.__enter__ - A (1)
+    M 296:4 _ReadContext.__exit__ - A (1)
+    M 512:4 ProgressColumn.__init__ - A (1)
+    M 545:4 ProgressColumn.render - A (1)
+    M 556:4 RenderableColumn.__init__ - A (1)
+    M 562:4 RenderableColumn.render - A (1)
+    M 592:4 SpinnerColumn.set_spinner - A (1)
+    M 657:4 BarColumn.__init__ - A (1)
+    M 714:4 TaskProgressColumn.__init__ - A (1)
+    M 783:4 TimeRemainingColumn.__init__ - A (1)
+    M 823:4 FileSizeColumn.render - A (1)
+    M 850:4 MofNCompleteColumn.__init__ - A (1)
+    M 872:4 DownloadColumn.__init__ - A (1)
+    C 926:0 ProgressSample - A (1)
+    M 983:4 Task.get_time - A (1)
+    M 988:4 Task.started - A (1)
+    M 1009:4 Task.finished - A (1)
+    M 1054:4 Task._reset - A (1)
+    M 1114:4 Progress.get_default_columns - A (1)
+    M 1145:4 Progress.console - A (1)
+    M 1149:4 Progress.tasks - A (1)
+    M 1155:4 Progress.task_ids - A (1)
+    M 1179:4 Progress.__enter__ - A (1)
+    M 1183:4 Progress.__exit__ - A (1)
+    M 1279:4 Progress.open - A (1)
+    M 1295:4 Progress.open - A (1)
+    M 1551:4 Progress.get_renderable - A (1)
+    M 1556:4 Progress.get_renderables - A (1)
+    M 1594:4 Progress.__rich__ - A (1)
+    M 1642:4 Progress.remove_task - A (1)
+rich/text.py
+    M 1107:4 Text.divide - C (15)
+    M 1202:4 Text.wrap - C (12)
+    M 593:4 Text.highlight_regex - B (10)
+    M 720:4 Text.render - B (10)
+    M 818:4 Text.expand_tabs - B (9)
+    M 965:4 Text.append - B (9)
+    M 1063:4 Text.split - B (9)
+    M 860:4 Text.truncate - B (8)
+    M 230:4 Text.markup - B (7)
+    M 457:4 Text.stylize - B (7)
+    M 483:4 Text.stylize_before - B (7)
+    M 689:4 Text.__rich_console__ - B (7)
+    M 1287:4 Text.with_indent_guides - B (7)
+    M 1266:4 Text.detect_indentation - B (6)
+    C 118:0 Text - A (5)
+    M 572:4 Text.extend_style - A (5)
+    M 708:4 Text.__rich_measure__ - A (5)
+    M 357:4 Text.assemble - A (4)
+    M 552:4 Text.get_style_at_offset - A (4)
+    M 633:4 Text.highlight_words - A (4)
+    M 779:4 Text.join - A (4)
+    M 887:4 Text._trim_spans - A (4)
+    M 901:4 Text.pad - A (4)
+    M 918:4 Text.pad_left - A (4)
+    M 945:4 Text.align - A (4)
+    M 1186:4 Text.right_crop - A (4)
+    M 63:4 Span.split - A (3)
+    M 186:4 Text.__eq__ - A (3)
+    M 191:4 Text.__contains__ - A (3)
+    M 198:4 Text.__getitem__ - A (3)
+    M 410:4 Text.plain - A (3)
+    M 523:4 Text.on - A (3)
+    M 666:4 Text.rstrip_end - A (3)
+    M 680:4 Text.set_length - A (3)
+    M 934:4 Text.pad_right - A (3)
+    M 1009:4 Text.append_text - A (3)
+    M 1031:4 Text.append_tokens - A (3)
+    C 47:0 Span - A (2)
+    M 88:4 Span.right_crop - A (2)
+    M 102:4 Span.extend - A (2)
+    M 144:4 Text.__init__ - A (2)
+    M 179:4 Text.__add__ - A (2)
+    M 294:4 Text.from_ansi - A (2)
+    M 403:4 Text.plain - A (2)
+    M 543:4 Text.remove_suffix - A (2)
+    M 1250:4 Text.fit - A (2)
+    M 57:4 Span.__repr__ - A (1)
+    M 60:4 Span.__bool__ - A (1)
+    M 76:4 Span.move - A (1)
+    M 167:4 Text.__len__ - A (1)
+    M 170:4 Text.__bool__ - A (1)
+    M 173:4 Text.__str__ - A (1)
+    M 176:4 Text.__repr__ - A (1)
+    M 225:4 Text.cell_len - A (1)
+    M 260:4 Text.from_markup - A (1)
+    M 332:4 Text.styled - A (1)
+    M 421:4 Text.spans - A (1)
+    M 426:4 Text.spans - A (1)
+    M 430:4 Text.blank_copy - A (1)
+    M 443:4 Text.copy - A (1)
+    M 509:4 Text.apply_meta - A (1)
+    M 662:4 Text.rstrip - A (1)
+    M 1055:4 Text.copy_styles - A (1)
+rich/terminal_theme.py
+    C 9:0 TerminalTheme - A (3)
+    M 20:4 TerminalTheme.__init__ - A (2)
+rich/_null_file.py
+    C 5:0 NullFile - A (2)
+    M 6:4 NullFile.close - A (1)
+    M 9:4 NullFile.isatty - A (1)
+    M 12:4 NullFile.read - A (1)
+    M 15:4 NullFile.readable - A (1)
+    M 18:4 NullFile.readline - A (1)
+    M 21:4 NullFile.readlines - A (1)
+    M 24:4 NullFile.seek - A (1)
+    M 27:4 NullFile.seekable - A (1)
+    M 30:4 NullFile.tell - A (1)
+    M 33:4 NullFile.truncate - A (1)
+    M 36:4 NullFile.writable - A (1)
+    M 39:4 NullFile.writelines - A (1)
+    M 42:4 NullFile.__next__ - A (1)
+    M 45:4 NullFile.__iter__ - A (1)
+    M 48:4 NullFile.__enter__ - A (1)
+    M 51:4 NullFile.__exit__ - A (1)
+    M 59:4 NullFile.write - A (1)
+    M 62:4 NullFile.flush - A (1)
+    M 65:4 NullFile.fileno - A (1)
+rich/repr.py
+    F 37:0 auto - A (2)
+    F 114:0 rich_repr - A (2)
+    C 126:4 Foo - A (2)
+    F 28:0 auto - A (1)
+    F 33:0 auto - A (1)
+    F 105:0 rich_repr - A (1)
+    F 110:0 rich_repr - A (1)
+    C 23:0 ReprError - A (1)
+    M 127:8 Foo.__rich_repr__ - A (1)
+rich/control.py
+    M 58:4 Control.__init__ - A (4)
+    M 108:4 Control.move_to_column - A (3)
+    C 48:0 Control - A (2)
+    M 150:4 Control.show_cursor - A (2)
+    M 155:4 Control.alt_screen - A (2)
+    M 174:4 Control.__rich_console__ - A (2)
+    F 181:0 strip_control_codes - A (1)
+    F 195:0 escape_control_codes - A (1)
+    M 69:4 Control.bell - A (1)
+    M 74:4 Control.home - A (1)
+    M 79:4 Control.move - A (1)
+    M 132:4 Control.move_to - A (1)
+    M 145:4 Control.clear - A (1)
+    M 163:4 Control.title - A (1)
+    M 171:4 Control.__str__ - A (1)
+rich/ansi.py
+    M 138:4 AnsiDecoder.decode_line - D (22)
+    C 120:0 AnsiDecoder - B (9)
+    F 28:0 _ansi_tokenize - B (7)
+    M 126:4 AnsiDecoder.decode - A (2)
+    F 224:4 read - A (1)
+    C 20:0 _AnsiToken - A (1)
+    M 123:4 AnsiDecoder.__init__ - A (1)
+rich/_pick.py
+    F 4:0 pick_bool - A (4)
+rich/_fileno.py
+    F 6:0 get_fileno - A (3)
+rich/color_triplet.py
+    C 4:0 ColorTriplet - A (2)
+    M 15:4 ColorTriplet.hex - A (1)
+    M 21:4 ColorTriplet.rgb - A (1)
+    M 31:4 ColorTriplet.normalized - A (1)
+rich/theme.py
+    M 18:4 Theme.__init__ - A (5)
+    C 8:0 Theme - A (3)
+    C 80:0 ThemeStack - A (3)
+    M 31:4 Theme.config - A (2)
+    M 39:4 Theme.from_file - A (2)
+    M 91:4 ThemeStack.push_theme - A (2)
+    M 105:4 ThemeStack.pop_theme - A (2)
+    M 59:4 Theme.read - A (1)
+    C 76:0 ThemeStackError - A (1)
+    M 87:4 ThemeStack.__init__ - A (1)
+rich/pager.py
+    C 5:0 Pager - A (2)
+    C 17:0 SystemPager - A (2)
+    M 9:4 Pager.show - A (1)
+    M 20:4 SystemPager._pager - A (1)
+    M 23:4 SystemPager.show - A (1)
+rich/palette.py
+    C 83:4 ColorBox - A (4)
+    M 84:8 ColorBox.__rich_console__ - A (3)
+    C 11:0 Palette - A (2)
+    M 20:4 Palette.__rich__ - A (2)
+    M 14:4 Palette.__init__ - A (1)
+    M 17:4 Palette.__getitem__ - A (1)
+    M 45:4 Palette.match - A (1)
+rich/_ratio.py
+    F 14:0 ratio_resolve - C (18)
+    F 107:0 ratio_distribute - B (8)
+    F 75:0 ratio_reduce - B (7)
+    C 6:0 Edge - A (1)
+    C 147:4 E - A (1)
+rich/file_proxy.py
+    M 28:4 FileProxy.write - B (6)
+    C 11:0 FileProxy - A (3)
+    M 50:4 FileProxy.flush - A (2)
+    M 14:4 FileProxy.__init__ - A (1)
+    M 21:4 FileProxy.rich_proxied_file - A (1)
+    M 25:4 FileProxy.__getattr__ - A (1)
+    M 56:4 FileProxy.fileno - A (1)
+rich/align.py
+    M 129:4 Align.__rich_console__ - C (11)
+    M 251:4 VerticalCenter.__rich_console__ - B (6)
+    C 17:0 Align - A (4)
+    M 33:4 Align.__init__ - A (4)
+    C 228:0 VerticalCenter - A (3)
+    M 60:4 Align.__repr__ - A (1)
+    M 64:4 Align.left - A (1)
+    M 86:4 Align.center - A (1)
+    M 108:4 Align.right - A (1)
+    M 221:4 Align.__rich_measure__ - A (1)
+    M 240:4 VerticalCenter.__init__ - A (1)
+    M 248:4 VerticalCenter.__repr__ - A (1)
+    M 278:4 VerticalCenter.__rich_measure__ - A (1)
+rich/color.py
+    M 513:4 Color.downgrade - C (20)
+    M 485:4 Color.get_ansi_codes - C (16)
+    M 349:4 Color.get_truecolor - C (12)
+    M 433:4 Color.parse - C (12)
+    C 303:0 Color - B (6)
+    F 571:0 parse_rgb_hex - A (2)
+    C 21:0 ColorSystem - A (2)
+    C 36:0 ColorType - A (2)
+    M 333:4 Color.system - A (2)
+    M 381:4 Color.from_ansi - A (2)
+    F 580:0 blend_rgb - A (1)
+    M 29:4 ColorSystem.__repr__ - A (1)
+    M 32:4 ColorSystem.__str__ - A (1)
+    M 45:4 ColorType.__repr__ - A (1)
+    C 288:0 ColorParseError - A (1)
+    M 315:4 Color.__rich__ - A (1)
+    M 326:4 Color.__rich_repr__ - A (1)
+    M 340:4 Color.is_system_defined - A (1)
+    M 345:4 Color.is_default - A (1)
+    M 397:4 Color.from_triplet - A (1)
+    M 409:4 Color.from_rgb - A (1)
+    M 423:4 Color.default - A (1)
+rich/pretty.py
+    M 424:4 Node.iter_tokens - B (10)
+    M 304:4 Pretty.__rich_console__ - B (8)
+    M 519:4 _Line.expand - B (8)
+    M 467:4 Node.render - B (7)
+    F 113:0 _ipy_display_hook - B (6)
+    C 409:0 Node - B (6)
+    F 171:0 install - A (5)
+    F 398:0 is_expandable - A (5)
+    C 253:0 Pretty - A (5)
+    C 494:0 _Line - A (5)
+    M 552:4 _Line.__str__ - A (4)
+    F 561:0 _is_namedtuple - A (3)
+    M 339:4 Pretty.__rich_measure__ - A (3)
+    M 446:4 Node.check_length - A (3)
+    F 60:0 _is_attr_object - A (2)
+    F 65:0 _get_attr_fields - A (2)
+    F 70:0 _is_dataclass_repr - A (2)
+    F 93:0 _has_default_namedtuple_repr - A (2)
+    F 161:0 _safe_isinstance - A (2)
+    F 365:0 _get_braces_for_deque - A (2)
+    F 878:0 pretty_repr - A (2)
+    F 918:0 pprint - A (2)
+    M 273:4 Pretty.__init__ - A (2)
+    M 507:4 _Line.expandable - A (2)
+    M 511:4 _Line.check_length - A (2)
+    C 957:4 BrokenRepr - A (2)
+    C 1012:4 Thing - A (2)
+    F 357:0 _get_braces_for_defaultdict - A (1)
+    F 375:0 _get_braces_for_array - A (1)
+    F 580:0 traverse - A (1)
+    M 463:4 Node.__str__ - A (1)
+    M 958:8 BrokenRepr.__repr__ - A (1)
+    C 964:4 StockKeepingUnit - A (1)
+    M 1013:8 Thing.__repr__ - A (1)
+rich/markup.py
+    F 106:0 render - D (21)
+    F 73:0 _parse - B (8)
+    F 48:0 escape - A (3)
+    C 20:0 Tag - A (3)
+    M 28:4 Tag.__str__ - A (2)
+    M 34:4 Tag.markup - A (2)
+rich/_loop.py
+    F 6:0 loop_first - A (3)
+    F 18:0 loop_last - A (3)
+    F 31:0 loop_first_last - A (3)
+rich/_stack.py
+    C 6:0 Stack - A (2)
+    M 10:4 Stack.top - A (1)
+    M 14:4 Stack.push - A (1)
+rich/highlighter.py
+    C 106:0 JSONHighlighter - B (6)
+    M 123:4 JSONHighlighter.highlight - A (5)
+    C 17:0 Highlighter - A (3)
+    M 20:4 Highlighter.__call__ - A (3)
+    C 61:0 RegexHighlighter - A (3)
+    C 50:0 NullHighlighter - A (2)
+    M 67:4 RegexHighlighter.highlight - A (2)
+    F 8:0 _combine_regex - A (1)
+    M 42:4 Highlighter.highlight - A (1)
+    M 57:4 NullHighlighter.highlight - A (1)
+    C 80:0 ReprHighlighter - A (1)
+    C 143:0 ISO8601Highlighter - A (1)
+rich/spinner.py
+    M 61:4 Spinner.render - B (6)
+    M 95:4 Spinner.update - A (5)
+    C 13:0 Spinner - A (4)
+    M 26:4 Spinner.__init__ - A (3)
+    M 50:4 Spinner.__rich_console__ - A (1)
+    M 55:4 Spinner.__rich_measure__ - A (1)
+rich/__main__.py
+    C 18:0 ColorBox - A (3)
+    M 19:4 ColorBox.__rich_console__ - A (3)
+    F 39:0 make_test_card - A (1)
+    M 33:4 ColorBox.__rich_measure__ - A (1)
+rich/_wrap.py
+    F 26:0 divide_line - C (11)
+    F 12:0 words - A (2)
+rich/syntax.py
+    M 649:4 Syntax._get_syntax - D (26)
+    M 380:4 Syntax.guess_lexer - B (8)
+    M 467:4 Syntax.highlight - B (8)
+    M 154:4 PygmentsSyntaxTheme.get_style_for_token - B (6)
+    M 573:4 Syntax._get_line_numbers_color - B (6)
+    M 787:4 Syntax._apply_stylized_ranges - B (6)
+    C 240:0 Syntax - A (5)
+    M 622:4 Syntax.__rich_measure__ - A (5)
+    C 138:0 PygmentsSyntaxTheme - A (4)
+    M 189:4 ANSISyntaxTheme.get_style_for_token - A (4)
+    F 841:0 _get_code_index_for_syntax_position - A (3)
+    M 141:4 PygmentsSyntaxTheme.__init__ - A (3)
+    C 180:0 ANSISyntaxTheme - A (3)
+    M 265:4 Syntax.get_theme - A (3)
+    M 276:4 Syntax.__init__ - A (3)
+    M 439:4 Syntax.lexer - A (3)
+    M 599:4 Syntax._get_number_styles - A (3)
+    M 820:4 Syntax._process_code - A (3)
+    C 124:0 SyntaxTheme - A (2)
+    C 229:0 PaddingProperty - A (2)
+    M 317:4 Syntax.from_path - A (2)
+    M 589:4 Syntax._numbers_column_width - A (2)
+    M 640:4 Syntax.__rich_console__ - A (2)
+    M 128:4 SyntaxTheme.get_style_for_token - A (1)
+    M 133:4 SyntaxTheme.get_background_style - A (1)
+    M 176:4 PygmentsSyntaxTheme.get_background_style - A (1)
+    M 183:4 ANSISyntaxTheme.__init__ - A (1)
+    M 209:4 ANSISyntaxTheme.get_background_style - A (1)
+    C 216:0 _SyntaxHighlightRange - A (1)
+    M 232:4 PaddingProperty.__get__ - A (1)
+    M 236:4 PaddingProperty.__set__ - A (1)
+    M 421:4 Syntax._get_base_style - A (1)
+    M 426:4 Syntax._get_token_color - A (1)
+    M 458:4 Syntax.default_lexer - A (1)
+    M 552:4 Syntax.stylize_range - A (1)
+rich/markdown.py
+    M 564:4 Markdown.__rich_console__ - E (33)
+    C 498:0 Markdown - C (14)
+    M 241:4 TableElement.__rich_console__ - B (7)
+    M 299:4 TableDataElement.create - B (6)
+    C 225:0 TableElement - A (5)
+    M 342:4 ListElement.__rich_console__ - A (5)
+    M 439:4 ImageItem.__rich_console__ - A (5)
+    M 554:4 Markdown._flatten_tokens - A (5)
+    C 294:0 TableDataElement - A (4)
+    M 143:4 Heading.__rich_console__ - A (3)
+    C 162:0 CodeBlock - A (3)
+    M 168:4 CodeBlock.create - A (3)
+    M 232:4 TableElement.on_child_close - A (3)
+    C 258:0 TableHeaderElement - A (3)
+    C 270:0 TableBodyElement - A (3)
+    C 282:0 TableRowElement - A (3)
+    C 325:0 ListElement - A (3)
+    C 357:0 ListItem - A (3)
+    M 369:4 ListItem.render_bullet - A (3)
+    M 382:4 ListItem.render_number - A (3)
+    C 410:0 ImageItem - A (3)
+    M 475:4 MarkdownContext.on_text - A (3)
+    C 25:0 MarkdownElement - A (2)
+    C 91:0 TextElement - A (2)
+    M 100:4 TextElement.on_text - A (2)
+    C 107:0 Paragraph - A (2)
+    M 114:4 Paragraph.create - A (2)
+    C 127:0 Heading - A (2)
+    C 187:0 BlockQuote - A (2)
+    M 199:4 BlockQuote.__rich_console__ - A (2)
+    C 213:0 HorizontalRule - A (2)
+    M 264:4 TableHeaderElement.on_child_close - A (2)
+    M 276:4 TableBodyElement.on_child_close - A (2)
+    M 288:4 TableRowElement.on_child_close - A (2)
+    M 319:4 TableDataElement.on_text - A (2)
+    M 337:4 ListElement.on_child_close - A (2)
+    C 399:0 Link - A (2)
+    C 450:0 MarkdownContext - A (2)
+    M 453:4 MarkdownContext.__init__ - A (2)
+    M 534:4 Markdown.__init__ - A (2)
+    M 29:4 MarkdownElement.create - A (1)
+    M 41:4 MarkdownElement.on_enter - A (1)
+    M 48:4 MarkdownElement.on_text - A (1)
+    M 55:4 MarkdownElement.on_leave - A (1)
+    M 62:4 MarkdownElement.on_child_close - A (1)
+    M 76:4 MarkdownElement.__rich_console__ - A (1)
+    C 82:0 UnknownElement - A (1)
+    M 96:4 TextElement.on_enter - A (1)
+    M 103:4 TextElement.on_leave - A (1)
+    M 117:4 Paragraph.__init__ - A (1)
+    M 120:4 Paragraph.__rich_console__ - A (1)
+    M 131:4 Heading.create - A (1)
+    M 134:4 Heading.on_enter - A (1)
+    M 138:4 Heading.__init__ - A (1)
+    M 173:4 CodeBlock.__init__ - A (1)
+    M 177:4 CodeBlock.__rich_console__ - A (1)
+    M 192:4 BlockQuote.__init__ - A (1)
+    M 195:4 BlockQuote.on_child_close - A (1)
+    M 218:4 HorizontalRule.__rich_console__ - A (1)
+    M 228:4 TableElement.__init__ - A (1)
+    M 261:4 TableHeaderElement.__init__ - A (1)
+    M 273:4 TableBodyElement.__init__ - A (1)
+    M 285:4 TableRowElement.__init__ - A (1)
+    M 315:4 TableDataElement.__init__ - A (1)
+    M 329:4 ListElement.create - A (1)
+    M 332:4 ListElement.__init__ - A (1)
+    M 362:4 ListItem.__init__ - A (1)
+    M 365:4 ListItem.on_child_close - A (1)
+    M 401:4 Link.create - A (1)
+    M 405:4 Link.__init__ - A (1)
+    M 416:4 ImageItem.create - A (1)
+    M 428:4 ImageItem.__init__ - A (1)
+    M 434:4 ImageItem.on_enter - A (1)
+    M 471:4 MarkdownContext.current_style - A (1)
+    M 486:4 MarkdownContext.enter_style - A (1)
+    M 492:4 MarkdownContext.leave_style - A (1)
+rich/rule.py
+    M 49:4 Rule.__rich_console__ - B (10)
+    C 12:0 Rule - A (4)
+    M 23:4 Rule.__init__ - A (3)
+    M 46:4 Rule.__repr__ - A (1)
+    M 105:4 Rule._rule_line - A (1)
+    M 111:4 Rule.__rich_measure__ - A (1)
+rich/live_render.py
+    M 76:4 LiveRender.__rich_console__ - B (6)
+    C 14:0 LiveRender - A (3)
+    M 41:4 LiveRender.position_cursor - A (2)
+    M 62:4 LiveRender.restore_cursor - A (2)
+    M 22:4 LiveRender.__init__ - A (1)
+    M 33:4 LiveRender.set_renderable - A (1)
+rich/_inspect.py
+    M 121:4 Inspect._render - D (28)
+    C 21:0 Inspect - B (9)
+    M 82:4 Inspect._get_signature - B (8)
+    M 37:4 Inspect.__init__ - A (5)
+    M 64:4 Inspect._make_title - A (4)
+    F 258:0 is_object_one_of_types - A (3)
+    M 214:4 Inspect._get_formatted_doc - A (3)
+    F 236:0 get_object_types_mro - A (2)
+    F 245:0 get_object_types_mro_as_strings - A (2)
+    F 15:0 _first_paragraph - A (1)
+    M 74:4 Inspect.__rich__ - A (1)
+rich/_win32_console.py
+    M 405:4 LegacyWindowsTerm.write_styled - B (10)
+    M 444:4 LegacyWindowsTerm.move_cursor_to - A (3)
+    F 95:0 GetConsoleMode - A (2)
+    C 33:0 WindowsCoordinates - A (2)
+    C 331:0 LegacyWindowsTerm - A (2)
+    M 514:4 LegacyWindowsTerm.move_cursor_forward - A (2)
+    M 535:4 LegacyWindowsTerm.move_cursor_backward - A (2)
+    M 559:4 LegacyWindowsTerm.set_title - A (2)
+    F 78:0 GetStdHandle - A (1)
+    F 128:0 FillConsoleOutputCharacter - A (1)
+    F 169:0 FillConsoleOutputAttribute - A (1)
+    F 204:0 SetConsoleTextAttribute - A (1)
+    F 228:0 GetConsoleScreenBufferInfo - A (1)
+    F 252:0 SetConsoleCursorPosition - A (1)
+    F 275:0 GetConsoleCursorInfo - A (1)
+    F 299:0 SetConsoleCursorInfo - A (1)
+    F 319:0 SetConsoleTitle - A (1)
+    C 29:0 LegacyWindowsError - A (1)
+    M 44:4 WindowsCoordinates.from_param - A (1)
+    C 57:0 CONSOLE_SCREEN_BUFFER_INFO - A (1)
+    C 67:0 CONSOLE_CURSOR_INFO - A (1)
+    M 362:4 LegacyWindowsTerm.__init__ - A (1)
+    M 377:4 LegacyWindowsTerm.cursor_position - A (1)
+    M 387:4 LegacyWindowsTerm.screen_size - A (1)
+    M 396:4 LegacyWindowsTerm.write_text - A (1)
+    M 454:4 LegacyWindowsTerm.erase_line - A (1)
+    M 470:4 LegacyWindowsTerm.erase_end_of_line - A (1)
+    M 484:4 LegacyWindowsTerm.erase_start_of_line - A (1)
+    M 493:4 LegacyWindowsTerm.move_cursor_up - A (1)
+    M 503:4 LegacyWindowsTerm.move_cursor_down - A (1)
+    M 526:4 LegacyWindowsTerm.move_cursor_to_column - A (1)
+    M 547:4 LegacyWindowsTerm.hide_cursor - A (1)
+    M 553:4 LegacyWindowsTerm.show_cursor - A (1)
+    M 568:4 LegacyWindowsTerm._get_cursor_size - A (1)
+rich/emoji.py
+    M 27:4 Emoji.__init__ - A (3)
+    C 22:0 Emoji - A (2)
+    C 18:0 NoEmoji - A (1)
+    M 53:4 Emoji.replace - A (1)
+    M 64:4 Emoji.__repr__ - A (1)
+    M 67:4 Emoji.__str__ - A (1)
+    M 70:4 Emoji.__rich_console__ - A (1)
+rich/console.py
+    M 625:4 Console.__init__ - E (32)
+    M 2325:4 Console.export_svg - C (19)
+    M 2042:4 Console._write_buffer - C (18)
+    M 1011:4 Console.size - C (16)
+    M 1648:4 Console.print - C (16)
+    M 2219:4 Console.export_html - C (15)
+    M 163:4 ConsoleOptions.update - C (12)
+    M 1415:4 Console.render_str - C (12)
+    M 1506:4 Console._collect_renderables - C (12)
+    M 1932:4 Console.log - C (11)
+    M 937:4 Console.is_terminal - B (10)
+    M 1300:4 Console.render - B (9)
+    M 795:4 Console._detect_color_system - B (8)
+    M 2173:4 Console.export_text - B (8)
+    M 1351:4 Console.render_lines - B (7)
+    M 2115:4 Console._render_buffer - B (7)
+    F 511:0 _is_jupyter - B (6)
+    M 1476:4 Console.get_style - B (6)
+    C 587:0 Console - A (5)
+    M 1808:4 Console.update_screen - A (5)
+    M 1898:4 Console._caller_frame_info - A (5)
+    M 389:4 PagerContext.__exit__ - A (4)
+    C 409:0 ScreenContext - A (4)
+    M 420:4 ScreenContext.update - A (4)
+    M 763:4 Console.file - A (4)
+    M 2139:4 Console.input - A (4)
+    C 119:0 ConsoleOptions - A (3)
+    C 298:0 ScreenUpdate - A (3)
+    C 370:0 PagerContext - A (3)
+    M 438:4 ScreenContext.__enter__ - A (3)
+    M 444:4 ScreenContext.__exit__ - A (3)
+    M 1207:4 Console.set_alt_screen - A (3)
+    M 1606:4 Console.control - A (3)
+    M 1747:4 Console.print_json - A (3)
+    M 2027:4 Console._check_buffer - A (3)
+    F 572:0 get_windows_console_features - A (2)
+    F 582:0 detect_legacy_windows - A (2)
+    C 253:0 RichCast - A (2)
+    C 263:0 ConsoleRenderable - A (2)
+    C 286:0 NewLine - A (2)
+    M 306:4 ScreenUpdate.__rich_console__ - A (2)
+    C 316:0 Capture - A (2)
+    M 340:4 Capture.get - A (2)
+    C 349:0 ThemeContext - A (2)
+    M 373:4 PagerContext.__init__ - A (2)
+    C 456:0 Group - A (2)
+    M 470:4 Group.renderables - A (2)
+    M 475:4 Group.__rich_measure__ - A (2)
+    C 550:0 RenderHook - A (2)
+    M 915:4 Console.color_system - A (2)
+    M 928:4 Console.encoding - A (2)
+    M 985:4 Console.is_dumb_terminal - A (2)
+    M 1142:4 Console.line - A (2)
+    M 1152:4 Console.clear - A (2)
+    M 1196:4 Console.show_cursor - A (2)
+    M 1237:4 Console.set_window_title - A (2)
+    M 1269:4 Console.screen - A (2)
+    M 1283:4 Console.measure - A (2)
+    M 1616:4 Console.out - A (2)
+    M 1842:4 Console.update_screen_lines - A (2)
+    F 489:0 group - A (1)
+    F 2615:0 _svg_hash - A (1)
+    C 79:0 NoChange - A (1)
+    C 109:0 ConsoleDimensions - A (1)
+    M 149:4 ConsoleOptions.ascii_only - A (1)
+    M 153:4 ConsoleOptions.copy - A (1)
+    M 200:4 ConsoleOptions.update_width - A (1)
+    M 213:4 ConsoleOptions.update_height - A (1)
+    M 226:4 ConsoleOptions.reset_height - A (1)
+    M 236:4 ConsoleOptions.update_dimensions - A (1)
+    M 256:4 RichCast.__rich__ - A (1)
+    M 266:4 ConsoleRenderable.__rich_console__ - A (1)
+    C 282:0 CaptureError - A (1)
+    M 289:4 NewLine.__init__ - A (1)
+    M 292:4 NewLine.__rich_console__ - A (1)
+    M 301:4 ScreenUpdate.__init__ - A (1)
+    M 324:4 Capture.__init__ - A (1)
+    M 328:4 Capture.__enter__ - A (1)
+    M 332:4 Capture.__exit__ - A (1)
+    M 352:4 ThemeContext.__init__ - A (1)
+    M 357:4 ThemeContext.__enter__ - A (1)
+    M 361:4 ThemeContext.__exit__ - A (1)
+    M 385:4 PagerContext.__enter__ - A (1)
+    M 412:4 ScreenContext.__init__ - A (1)
+    M 464:4 Group.__init__ - A (1)
+    M 483:4 Group.__rich_console__ - A (1)
+    C 542:0 ConsoleThreadLocals - A (1)
+    M 554:4 RenderHook.process_renderables - A (1)
+    M 759:4 Console.__repr__ - A (1)
+    M 772:4 Console.file - A (1)
+    M 777:4 Console._buffer - A (1)
+    M 782:4 Console._buffer_index - A (1)
+    M 787:4 Console._buffer_index - A (1)
+    M 791:4 Console._theme_stack - A (1)
+    M 819:4 Console._enter_buffer - A (1)
+    M 823:4 Console._exit_buffer - A (1)
+    M 828:4 Console.set_live - A (1)
+    M 844:4 Console.clear_live - A (1)
+    M 849:4 Console.push_render_hook - A (1)
+    M 858:4 Console.pop_render_hook - A (1)
+    M 863:4 Console.__enter__ - A (1)
+    M 868:4 Console.__exit__ - A (1)
+    M 872:4 Console.begin_capture - A (1)
+    M 876:4 Console.end_capture - A (1)
+    M 887:4 Console.push_theme - A (1)
+    M 898:4 Console.pop_theme - A (1)
+    M 902:4 Console.use_theme - A (1)
+    M 997:4 Console.options - A (1)
+    M 1052:4 Console.size - A (1)
+    M 1063:4 Console.width - A (1)
+    M 1072:4 Console.width - A (1)
+    M 1081:4 Console.height - A (1)
+    M 1090:4 Console.height - A (1)
+    M 1098:4 Console.bell - A (1)
+    M 1102:4 Console.capture - A (1)
+    M 1119:4 Console.pager - A (1)
+    M 1163:4 Console.status - A (1)
+    M 1229:4 Console.is_alt_screen - A (1)
+    M 1585:4 Console.rule - A (1)
+    M 1862:4 Console.print_exception - A (1)
+    M 2013:4 Console.on_broken_pipe - A (1)
+    M 2205:4 Console.save_text - A (1)
+    M 2294:4 Console.save_html - A (1)
+    M 2576:4 Console.save_svg - A (1)
+rich/traceback.py
+    M 413:4 Traceback.extract - E (34)
+    M 745:4 Traceback._render_stack - D (22)
+    C 255:0 Traceback - C (12)
+    M 286:4 Traceback.__init__ - B (10)
+    M 729:4 Traceback._guess_lexer - B (7)
+    F 55:0 _iter_syntax_lines - A (5)
+    F 83:0 install - A (5)
+    M 706:4 Traceback._render_syntax_error - A (3)
+    M 603:4 Traceback.__rich_console__ - A (2)
+    F 877:4 bar - A (1)
+    F 883:4 foo - A (1)
+    F 896:4 error - A (1)
+    C 215:0 Frame - A (1)
+    C 225:0 _SyntaxError - A (1)
+    C 235:0 Stack - A (1)
+    C 247:0 Trace - A (1)
+    C 251:0 PathHighlighter - A (1)
+    M 340:4 Traceback.from_exception - A (1)
+rich/abc.py
+    C 4:0 RichRenderable - A (3)
+    M 16:4 RichRenderable.__subclasshook__ - A (2)
+    C 28:4 Foo - A (1)
+rich/prompt.py
+    M 162:4 PromptBase.make_prompt - B (6)
+    M 227:4 PromptBase.process_response - B (6)
+    M 280:4 PromptBase.__call__ - B (6)
+    M 54:4 PromptBase.__init__ - A (4)
+    M 213:4 PromptBase.check_choice - A (4)
+    C 30:0 PromptBase - A (3)
+    C 340:0 Confirm - A (3)
+    C 15:0 InvalidResponse - A (2)
+    M 353:4 Confirm.render_default - A (2)
+    M 358:4 Confirm.process_response - A (2)
+    C 11:0 PromptError - A (1)
+    M 23:4 InvalidResponse.__init__ - A (1)
+    M 26:4 InvalidResponse.__rich__ - A (1)
+    M 80:4 PromptBase.ask - A (1)
+    M 97:4 PromptBase.ask - A (1)
+    M 112:4 PromptBase.ask - A (1)
+    M 151:4 PromptBase.render_default - A (1)
+    M 194:4 PromptBase.get_input - A (1)
+    M 258:4 PromptBase.on_validate_error - A (1)
+    M 267:4 PromptBase.pre_prompt - A (1)
+    M 271:4 PromptBase.__call__ - A (1)
+    M 275:4 PromptBase.__call__ - A (1)
+    C 304:0 Prompt - A (1)
+    C 316:0 IntPrompt - A (1)
+    C 328:0 FloatPrompt - A (1)
+rich/styled.py
+    C 11:0 Styled - A (2)
+    M 19:4 Styled.__init__ - A (1)
+    M 23:4 Styled.__rich_console__ - A (1)
+    M 31:4 Styled.__rich_measure__ - A (1)
+rich/padding.py
+    M 79:4 Padding.__rich_console__ - C (11)
+    M 61:4 Padding.unpack - A (5)
+    C 19:0 Padding - A (4)
+    M 125:4 Padding.__rich_measure__ - A (2)
+    M 33:4 Padding.__init__ - A (1)
+    M 47:4 Padding.indent - A (1)
+    M 76:4 Padding.__repr__ - A (1)
+rich/tree.py
+    M 86:4 Tree.__rich_console__ - D (23)
+    C 14:0 Tree - B (9)
+    M 176:4 Tree.__rich_measure__ - A (5)
+    M 55:4 Tree.add - A (4)
+    M 37:4 Tree.__init__ - A (1)
+rich/constrain.py
+    C 10:0 Constrain - A (3)
+    M 22:4 Constrain.__rich_console__ - A (2)
+    M 31:4 Constrain.__rich_measure__ - A (2)
+    M 18:4 Constrain.__init__ - A (1)
+rich/region.py
+    C 4:0 Region - A (1)
+rich/_windows.py
+    F 40:4 get_windows_console_features - B (6)
+    F 34:4 get_windows_console_features - A (1)
+    C 6:0 WindowsConsoleFeatures - A (1)
+rich/jupyter.py
+    C 36:0 JupyterMixin - B (8)
+    M 25:4 JupyterRenderable._repr_mimebundle_ - B (7)
+    M 41:4 JupyterMixin._repr_mimebundle_ - B (7)
+    F 59:0 _render_segments - B (6)
+    C 18:0 JupyterRenderable - A (5)
+    F 84:0 display - A (2)
+    F 98:0 print - A (1)
+    M 21:4 JupyterRenderable.__init__ - A (1)
+rich/progress_bar.py
+    M 156:4 ProgressBar.__rich_console__ - D (21)
+    M 70:4 ProgressBar._get_pulse_segments - B (8)
+    C 18:0 ProgressBar - B (6)
+    M 61:4 ProgressBar.percentage_completed - A (2)
+    M 116:4 ProgressBar.update - A (2)
+    M 126:4 ProgressBar._render_pulse - A (2)
+    M 200:4 ProgressBar.__rich_measure__ - A (2)
+    M 33:4 ProgressBar.__init__ - A (1)
+    M 57:4 ProgressBar.__repr__ - A (1)
+rich/box.py
+    M 115:4 Box.get_row - B (9)
+    M 67:4 Box.substitute - A (5)
+    C 10:0 Box - A (4)
+    M 95:4 Box.get_top - A (3)
+    M 164:4 Box.get_bottom - A (3)
+    M 27:4 Box.__init__ - A (1)
+    M 61:4 Box.__repr__ - A (1)
+    M 64:4 Box.__str__ - A (1)
+    M 85:4 Box.get_plain_headed_box - A (1)
+
+1027 blocks (classes, functions, methods) analyzed.
+Average complexity: A (3.243427458617332)
+
+=========================================
+MAINTAINABILITY INDEX (radon mi -s)
+=========================================
+rich/json.py - A (79.76)
+rich/style.py - B (12.94)
+rich/themes.py - A (100.00)
+rich/columns.py - A (50.70)
+rich/_emoji_replace.py - A (86.16)
+rich/containers.py - A (46.38)
+rich/__init__.py - A (78.20)
+rich/logging.py - A (60.65)
+rich/protocol.py - A (84.99)
+rich/_extension.py - A (100.00)
+rich/bar.py - A (69.45)
+rich/default_styles.py - A (72.95)
+rich/panel.py - A (48.10)
+rich/_timer.py - A (93.74)
+rich/table.py - B (14.80)
+rich/_log_render.py - A (51.11)
+rich/layout.py - A (45.81)
+rich/diagnose.py - A (81.65)
+rich/_spinners.py - A (100.00)
+rich/errors.py - A (100.00)
+rich/screen.py - A (80.22)
+rich/status.py - A (69.25)
+rich/scope.py - A (82.64)
+rich/measure.py - A (73.52)
+rich/cells.py - A (60.57)
+rich/live.py - A (36.71)
+rich/_palettes.py - A (100.00)
+rich/_windows_renderer.py - A (61.86)
+rich/filesize.py - A (83.88)
+rich/segment.py - A (32.04)
+rich/progress.py - C (8.90)
+rich/text.py - C (6.43)
+rich/terminal_theme.py - A (80.06)
+rich/_null_file.py - A (59.79)
+rich/repr.py - A (53.70)
+rich/control.py - A (68.19)
+rich/ansi.py - A (52.31)
+rich/_pick.py - A (100.00)
+rich/_fileno.py - A (95.03)
+rich/_export_format.py - A (100.00)
+rich/_emoji_codes.py - A (100.00)
+rich/color_triplet.py - A (87.56)
+rich/theme.py - A (75.60)
+rich/pager.py - A (94.12)
+rich/palette.py - A (59.08)
+rich/_ratio.py - A (63.46)
+rich/file_proxy.py - A (53.99)
+rich/align.py - A (47.01)
+rich/color.py - A (30.47)
+rich/pretty.py - A (28.88)
+rich/markup.py - A (53.30)
+rich/_loop.py - A (100.00)
+rich/_stack.py - A (74.77)
+rich/highlighter.py - A (69.81)
+rich/spinner.py - A (67.29)
+rich/__main__.py - A (45.54)
+rich/_wrap.py - A (74.66)
+rich/syntax.py - A (27.16)
+rich/markdown.py - A (19.92)
+rich/rule.py - A (53.48)
+rich/live_render.py - A (70.28)
+rich/_inspect.py - A (49.83)
+rich/_win32_console.py - A (49.42)
+rich/emoji.py - A (75.32)
+rich/console.py - C (0.00)
+rich/traceback.py - A (29.93)
+rich/abc.py - A (93.17)
+rich/prompt.py - A (55.96)
+rich/_cell_widths.py - A (98.50)
+rich/styled.py - A (89.28)
+rich/padding.py - A (59.88)
+rich/tree.py - A (48.36)
+rich/constrain.py - A (85.59)
+rich/region.py - A (100.00)
+rich/_windows.py - A (65.74)
+rich/jupyter.py - A (55.65)
+rich/progress_bar.py - A (51.06)
+rich/box.py - A (54.49)
+
+=========================================
+RAW METRICS (radon raw -s)
+=========================================
+rich/json.py
+    LOC: 139
+    LLOC: 46
+    SLOC: 94
+    Comments: 0
+    Single comments: 0
+    Multi: 29
+    Blank: 16
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 21%
+rich/style.py
+    LOC: 792
+    LLOC: 493
+    SLOC: 568
+    Comments: 2
+    Single comments: 18
+    Multi: 107
+    Blank: 99
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 14%
+rich/themes.py
+    LOC: 5
+    LLOC: 3
+    SLOC: 3
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 2
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/columns.py
+    LOC: 187
+    LLOC: 122
+    SLOC: 150
+    Comments: 2
+    Single comments: 1
+    Multi: 16
+    Blank: 20
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 10%
+rich/_emoji_replace.py
+    LOC: 32
+    LLOC: 20
+    SLOC: 24
+    Comments: 3
+    Single comments: 1
+    Multi: 0
+    Blank: 7
+    - Comment Stats
+        (C % L): 9%
+        (C % S): 12%
+        (C + M % L): 9%
+rich/containers.py
+    LOC: 167
+    LLOC: 99
+    SLOC: 128
+    Comments: 0
+    Single comments: 4
+    Multi: 7
+    Blank: 28
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 4%
+rich/__init__.py
+    LOC: 177
+    LLOC: 43
+    SLOC: 89
+    Comments: 5
+    Single comments: 4
+    Multi: 52
+    Blank: 32
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 6%
+        (C + M % L): 32%
+rich/logging.py
+    LOC: 297
+    LLOC: 122
+    SLOC: 208
+    Comments: 5
+    Single comments: 5
+    Multi: 52
+    Blank: 32
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 19%
+rich/protocol.py
+    LOC: 42
+    LLOC: 23
+    SLOC: 24
+    Comments: 2
+    Single comments: 2
+    Multi: 6
+    Blank: 10
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 8%
+        (C + M % L): 19%
+rich/_extension.py
+    LOC: 10
+    LLOC: 6
+    SLOC: 6
+    Comments: 2
+    Single comments: 1
+    Multi: 0
+    Blank: 3
+    - Comment Stats
+        (C % L): 20%
+        (C % S): 33%
+        (C + M % L): 20%
+rich/bar.py
+    LOC: 93
+    LLOC: 44
+    SLOC: 62
+    Comments: 5
+    Single comments: 5
+    Multi: 9
+    Blank: 17
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 8%
+        (C + M % L): 15%
+rich/default_styles.py
+    LOC: 193
+    LLOC: 22
+    SLOC: 184
+    Comments: 3
+    Single comments: 0
+    Multi: 0
+    Blank: 9
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 2%
+rich/panel.py
+    LOC: 317
+    LLOC: 138
+    SLOC: 255
+    Comments: 1
+    Single comments: 1
+    Multi: 29
+    Blank: 32
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 9%
+rich/_timer.py
+    LOC: 19
+    LLOC: 13
+    SLOC: 10
+    Comments: 0
+    Single comments: 1
+    Multi: 3
+    Blank: 5
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 16%
+rich/table.py
+    LOC: 1006
+    LLOC: 519
+    SLOC: 743
+    Comments: 5
+    Single comments: 41
+    Multi: 103
+    Blank: 119
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 1%
+        (C + M % L): 11%
+rich/_log_render.py
+    LOC: 94
+    LLOC: 60
+    SLOC: 81
+    Comments: 1
+    Single comments: 0
+    Multi: 0
+    Blank: 13
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+rich/layout.py
+    LOC: 442
+    LLOC: 246
+    SLOC: 291
+    Comments: 0
+    Single comments: 14
+    Multi: 53
+    Blank: 84
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 12%
+rich/diagnose.py
+    LOC: 39
+    LLOC: 19
+    SLOC: 31
+    Comments: 2
+    Single comments: 1
+    Multi: 0
+    Blank: 7
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 6%
+        (C + M % L): 5%
+rich/_spinners.py
+    LOC: 482
+    LLOC: 3
+    SLOC: 461
+    Comments: 0
+    Single comments: 0
+    Multi: 20
+    Blank: 1
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 4%
+rich/errors.py
+    LOC: 34
+    LLOC: 18
+    SLOC: 9
+    Comments: 0
+    Single comments: 9
+    Multi: 0
+    Blank: 16
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/screen.py
+    LOC: 54
+    LLOC: 26
+    SLOC: 39
+    Comments: 0
+    Single comments: 0
+    Multi: 5
+    Blank: 10
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 9%
+rich/status.py
+    LOC: 131
+    LLOC: 65
+    SLOC: 94
+    Comments: 1
+    Single comments: 3
+    Multi: 16
+    Blank: 18
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 13%
+rich/scope.py
+    LOC: 86
+    LLOC: 33
+    SLOC: 60
+    Comments: 1
+    Single comments: 1
+    Multi: 12
+    Blank: 13
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 15%
+rich/measure.py
+    LOC: 151
+    LLOC: 69
+    SLOC: 80
+    Comments: 0
+    Single comments: 4
+    Multi: 42
+    Blank: 25
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 28%
+rich/cells.py
+    LOC: 174
+    LLOC: 99
+    SLOC: 104
+    Comments: 11
+    Single comments: 7
+    Multi: 28
+    Blank: 35
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 11%
+        (C + M % L): 22%
+rich/live.py
+    LOC: 400
+    LLOC: 239
+    SLOC: 307
+    Comments: 14
+    Single comments: 15
+    Multi: 26
+    Blank: 52
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 5%
+        (C + M % L): 10%
+rich/_palettes.py
+    LOC: 309
+    LLOC: 4
+    SLOC: 301
+    Comments: 3
+    Single comments: 3
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+rich/_windows_renderer.py
+    LOC: 56
+    LLOC: 49
+    SLOC: 47
+    Comments: 0
+    Single comments: 0
+    Multi: 5
+    Blank: 4
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 9%
+rich/filesize.py
+    LOC: 88
+    LLOC: 24
+    SLOC: 43
+    Comments: 1
+    Single comments: 1
+    Multi: 26
+    Blank: 18
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 31%
+rich/segment.py
+    LOC: 752
+    LLOC: 398
+    SLOC: 467
+    Comments: 2
+    Single comments: 5
+    Multi: 165
+    Blank: 115
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 22%
+rich/progress.py
+    LOC: 1715
+    LLOC: 757
+    SLOC: 1134
+    Comments: 17
+    Single comments: 63
+    Multi: 259
+    Blank: 259
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 16%
+rich/text.py
+    LOC: 1361
+    LLOC: 733
+    SLOC: 890
+    Comments: 7
+    Single comments: 23
+    Multi: 255
+    Blank: 193
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 19%
+rich/terminal_theme.py
+    LOC: 153
+    LLOC: 15
+    SLOC: 135
+    Comments: 0
+    Single comments: 0
+    Multi: 8
+    Blank: 10
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 5%
+rich/_null_file.py
+    LOC: 69
+    LLOC: 42
+    SLOC: 47
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/repr.py
+    LOC: 149
+    LLOC: 99
+    SLOC: 112
+    Comments: 6
+    Single comments: 4
+    Multi: 0
+    Blank: 33
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 5%
+        (C + M % L): 4%
+rich/control.py
+    LOC: 219
+    LLOC: 86
+    SLOC: 127
+    Comments: 7
+    Single comments: 6
+    Multi: 43
+    Blank: 43
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 6%
+        (C + M % L): 23%
+rich/ansi.py
+    LOC: 241
+    LLOC: 112
+    SLOC: 182
+    Comments: 7
+    Single comments: 8
+    Multi: 18
+    Blank: 33
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 10%
+rich/_pick.py
+    LOC: 17
+    LLOC: 8
+    SLOC: 7
+    Comments: 0
+    Single comments: 0
+    Multi: 6
+    Blank: 4
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 35%
+rich/_fileno.py
+    LOC: 24
+    LLOC: 12
+    SLOC: 10
+    Comments: 3
+    Single comments: 3
+    Multi: 6
+    Blank: 5
+    - Comment Stats
+        (C % L): 12%
+        (C % S): 30%
+        (C + M % L): 38%
+rich/_export_format.py
+    LOC: 76
+    LLOC: 4
+    SLOC: 68
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 8
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/_emoji_codes.py
+    LOC: 3610
+    LLOC: 2
+    SLOC: 3610
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/color_triplet.py
+    LOC: 38
+    LLOC: 28
+    SLOC: 17
+    Comments: 0
+    Single comments: 5
+    Multi: 8
+    Blank: 8
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 21%
+rich/theme.py
+    LOC: 115
+    LLOC: 56
+    SLOC: 58
+    Comments: 1
+    Single comments: 3
+    Multi: 30
+    Blank: 24
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 27%
+rich/pager.py
+    LOC: 34
+    LLOC: 20
+    SLOC: 16
+    Comments: 2
+    Single comments: 3
+    Multi: 4
+    Blank: 11
+    - Comment Stats
+        (C % L): 6%
+        (C % S): 12%
+        (C + M % L): 18%
+rich/palette.py
+    LOC: 100
+    LLOC: 59
+    SLOC: 74
+    Comments: 2
+    Single comments: 3
+    Multi: 6
+    Blank: 17
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 3%
+        (C + M % L): 8%
+rich/_ratio.py
+    LOC: 153
+    LLOC: 87
+    SLOC: 87
+    Comments: 12
+    Single comments: 13
+    Multi: 29
+    Blank: 24
+    - Comment Stats
+        (C % L): 8%
+        (C % S): 14%
+        (C + M % L): 27%
+rich/file_proxy.py
+    LOC: 57
+    LLOC: 48
+    SLOC: 45
+    Comments: 0
+    Single comments: 2
+    Multi: 0
+    Blank: 10
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/align.py
+    LOC: 306
+    LLOC: 144
+    SLOC: 243
+    Comments: 6
+    Single comments: 7
+    Multi: 20
+    Blank: 36
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 8%
+rich/color.py
+    LOC: 621
+    LLOC: 246
+    SLOC: 496
+    Comments: 11
+    Single comments: 20
+    Multi: 31
+    Blank: 74
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 7%
+rich/pretty.py
+    LOC: 1016
+    LLOC: 507
+    SLOC: 766
+    Comments: 22
+    Single comments: 28
+    Multi: 103
+    Blank: 119
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 3%
+        (C + M % L): 12%
+rich/markup.py
+    LOC: 251
+    LLOC: 148
+    SLOC: 174
+    Comments: 11
+    Single comments: 9
+    Multi: 21
+    Blank: 47
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 6%
+        (C + M % L): 13%
+rich/_loop.py
+    LOC: 43
+    LLOC: 36
+    SLOC: 33
+    Comments: 0
+    Single comments: 3
+    Multi: 0
+    Blank: 7
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/_stack.py
+    LOC: 16
+    LLOC: 11
+    SLOC: 8
+    Comments: 0
+    Single comments: 3
+    Multi: 0
+    Blank: 5
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/highlighter.py
+    LOC: 232
+    LLOC: 92
+    SLOC: 155
+    Comments: 38
+    Single comments: 7
+    Multi: 26
+    Blank: 44
+    - Comment Stats
+        (C % L): 16%
+        (C % S): 25%
+        (C + M % L): 28%
+rich/spinner.py
+    LOC: 132
+    LLOC: 68
+    SLOC: 89
+    Comments: 1
+    Single comments: 0
+    Multi: 21
+    Blank: 22
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 17%
+rich/__main__.py
+    LOC: 245
+    LLOC: 88
+    SLOC: 214
+    Comments: 2
+    Single comments: 2
+    Multi: 0
+    Blank: 29
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+rich/_wrap.py
+    LOC: 93
+    LLOC: 57
+    SLOC: 54
+    Comments: 10
+    Single comments: 8
+    Multi: 14
+    Blank: 17
+    - Comment Stats
+        (C % L): 11%
+        (C % S): 19%
+        (C + M % L): 26%
+rich/syntax.py
+    LOC: 985
+    LLOC: 433
+    SLOC: 738
+    Comments: 18
+    Single comments: 27
+    Multi: 109
+    Blank: 111
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 13%
+rich/markdown.py
+    LOC: 779
+    LLOC: 456
+    SLOC: 553
+    Comments: 11
+    Single comments: 28
+    Multi: 52
+    Blank: 146
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 8%
+rich/rule.py
+    LOC: 130
+    LLOC: 82
+    SLOC: 101
+    Comments: 1
+    Single comments: 0
+    Multi: 8
+    Blank: 21
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 7%
+rich/live_render.py
+    LOC: 106
+    LLOC: 54
+    SLOC: 73
+    Comments: 0
+    Single comments: 0
+    Multi: 17
+    Blank: 16
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 16%
+rich/_inspect.py
+    LOC: 268
+    LLOC: 156
+    SLOC: 188
+    Comments: 4
+    Single comments: 10
+    Multi: 32
+    Blank: 38
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 13%
+rich/_win32_console.py
+    LOC: 661
+    LLOC: 312
+    SLOC: 389
+    Comments: 22
+    Single comments: 14
+    Multi: 126
+    Blank: 132
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 6%
+        (C + M % L): 22%
+rich/emoji.py
+    LOC: 91
+    LLOC: 46
+    SLOC: 52
+    Comments: 1
+    Single comments: 1
+    Multi: 13
+    Blank: 25
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 15%
+rich/console.py
+    LOC: 2680
+    LLOC: 1235
+    SLOC: 1711
+    Comments: 41
+    Single comments: 78
+    Multi: 512
+    Blank: 379
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 2%
+        (C + M % L): 21%
+rich/traceback.py
+    LOC: 899
+    LLOC: 397
+    SLOC: 697
+    Comments: 29
+    Single comments: 24
+    Multi: 83
+    Blank: 95
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 12%
+rich/abc.py
+    LOC: 33
+    LLOC: 17
+    SLOC: 15
+    Comments: 1
+    Single comments: 1
+    Multi: 6
+    Blank: 11
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 7%
+        (C + M % L): 21%
+rich/prompt.py
+    LOC: 400
+    LLOC: 161
+    SLOC: 223
+    Comments: 2
+    Single comments: 5
+    Multi: 91
+    Blank: 81
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 1%
+        (C + M % L): 23%
+rich/_cell_widths.py
+    LOC: 454
+    LLOC: 1
+    SLOC: 452
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 1
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/styled.py
+    LOC: 42
+    LLOC: 23
+    SLOC: 26
+    Comments: 1
+    Single comments: 0
+    Multi: 5
+    Blank: 11
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 4%
+        (C + M % L): 14%
+rich/padding.py
+    LOC: 141
+    LLOC: 78
+    SLOC: 103
+    Comments: 1
+    Single comments: 1
+    Multi: 17
+    Blank: 20
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 13%
+rich/tree.py
+    LOC: 257
+    LLOC: 142
+    SLOC: 198
+    Comments: 1
+    Single comments: 1
+    Multi: 22
+    Blank: 36
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 1%
+        (C + M % L): 9%
+rich/constrain.py
+    LOC: 37
+    LLOC: 21
+    SLOC: 24
+    Comments: 0
+    Single comments: 0
+    Multi: 5
+    Blank: 8
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 14%
+rich/region.py
+    LOC: 10
+    LLOC: 11
+    SLOC: 6
+    Comments: 0
+    Single comments: 1
+    Multi: 0
+    Blank: 3
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+rich/_windows.py
+    LOC: 71
+    LLOC: 47
+    SLOC: 48
+    Comments: 1
+    Single comments: 4
+    Multi: 4
+    Blank: 15
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 7%
+rich/jupyter.py
+    LOC: 101
+    LLOC: 75
+    SLOC: 72
+    Comments: 2
+    Single comments: 7
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 3%
+        (C + M % L): 2%
+rich/progress_bar.py
+    LOC: 223
+    LLOC: 121
+    SLOC: 162
+    Comments: 2
+    Single comments: 2
+    Multi: 30
+    Blank: 29
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 14%
+rich/box.py
+    LOC: 474
+    LLOC: 157
+    SLOC: 354
+    Comments: 14
+    Single comments: 13
+    Multi: 45
+    Blank: 62
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 12%
+** Total **
+    LOC: 26696
+    LLOC: 10655
+    SLOC: 19999
+    Comments: 389
+    Single comments: 588
+    Multi: 2896
+    Blank: 3213
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 2%
+        (C + M % L): 12%
