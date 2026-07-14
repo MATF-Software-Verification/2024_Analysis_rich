@@ -140,3 +140,11 @@ Missed Statements:    411
 Overall Coverage:     94.97% (95%)
 Change:               +24 pokrivenih linija (+0.3%)
 ```
+
+**Napredak pokrivenosti po modulima:**
+
+| Modul | Baseline | Final | Promena |
+|-------|:--------:|:-----:|:-------:|
+| traceback.py | 88% | 93% | +5% |
+| progress.py | 92% | 93% | +1% |
+| live.py | 96% | 98% | +2% |
