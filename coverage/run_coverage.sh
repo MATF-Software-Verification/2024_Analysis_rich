@@ -3,7 +3,10 @@
 # Putanje do projekta i test foldera
 RICH_DIR="$HOME/Desktop/rich"
 NEW_TESTS="$HOME/Desktop/2024_Analysis_rich/tests"
-RESULTS_DIR="$(dirname "$0")/results"
+
+# Apsolutna putanja do foldera sa skriptom (pre cd)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+RESULTS_DIR="$SCRIPT_DIR/results"
 
 mkdir -p "$RESULTS_DIR"
 
