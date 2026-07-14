@@ -32,7 +32,7 @@ Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 
 ## 2. Korišćeni alati
 
-### 2.1 Pytest - Jedinični testovi
+### 2.11 Pytest - Jedinični testovi
 
 **Opis:** Framework za pisanje i pokretanje jediničnih testova u Python-u.
 
@@ -107,7 +107,7 @@ pytest tests/ -v
 * Svi testovi prolaze: 100% pass rate
 
 
-### 2.2 Coverage.py - Pokrivenost koda
+### 2.12 Coverage.py - Pokrivenost koda
 
 **Opis:** Alat za merenje pokrivenosti koda testovima - procenat koda izvršen tokom testiranja.
 
@@ -154,7 +154,7 @@ Change:               +24 pokrivenih linija (+0.3%)
 Dodavanjem 25 testova pokriveno je 24 novih linija koda (nepokrivene statements pale sa 435 na 411), pri čemu ukupna pokrivenost projekta ostaje na visokih 95%. Najznačajniji napredak je u modulu `traceback.py` koji je porastao sa 88% na 93% (+5 procentnih poena), što direktno odražava nove testove koji pokrivaju konstrukciju traceback objekata i filtriranje lokalnih promenljivih. Modul `live.py` porastao je sa 96% na 98% (+2 poena), a `progress.py` sa 92% na 93% (+1 poen).
 
 
-### 2.3 MyPy - Type checking
+### 2.2 MyPy - Type checking
 
 **Opis:** Statički type checker za Python koji proverava type hints i detektuje type safety probleme.
 
@@ -233,7 +233,7 @@ Detektovana je 1 type greška — `redundant-cast` u `console.py` (linija 1540),
 
 Za terminal rendering biblioteku koja mora da rukuje ANSI escape sekvencama, cross-platform konzolnim izlazom (Windows/Unix), dinamičkim pretty-printing-om proizvoljnih Python objekata i integracijom sa eksternim lexerima, rezultat od 96.56% type precision je izvanredan i pokazuje production-grade type safety. Preostala nepreciznost je logično locirana u modulima koji po svojoj prirodi rade sa dinamičkim ili introspektivnim tipovima.
 
-### 2.4 Radon - Code complexity
+### 2.3 Radon - Code complexity
 
 **Opis:** Alat za analizu ciklomatske kompleksnosti i indeksa održivosti (maintainability index) Python koda.
 
@@ -322,7 +322,7 @@ Rich demonstrira odličan balans između funkcionalnosti i održivosti sa prose�
 
 Niži indeks održivosti kod `console.py`, `text.py` i `progress.py` nije posledica lošeg koda već veličine fajlova — maintainability index oštro kažnjava velike module, a ta tri fajla su najveća u projektu (2.680, 1.361 i 1.715 LOC). Udeo komentara i docstring-ova od 12% pokazuje da je kod dokumentovan prevashodno kroz docstring-ove (2.896 linija), a ne kroz inline komentare.
 
-### 2.5 Pylint - Statička analiza
+### 2.4 Pylint - Statička analiza
 
 **Opis:** Alat za analizu kvaliteta koda, detekciju code smells i proveru imenovanja i kompleksnosti.
 
@@ -375,4 +375,52 @@ Broj grešaka (Error, 16): Radi se o false positive-ima — pylint prijavljuje `
 
 Rich kod ima visok kvalitet sa ocenom 8.26/10. Većina pylint upozorenja su stilske prirode (`line-too-long` čini preko četvrtine svih poruka) ili framework-specifični obrasci koji su u kontekstu terminal rendering biblioteke opravdani (`protected-access`, `unused-argument`, `cyclic-import`, `too-many-arguments`). Dokumentovanost je visoka na nivou metoda (96%) i klasa (87%), dok je udeo docstring-ova u kodu 33%, što pokazuje dobro dokumentovan kod.
 
+
+### 2.5 Vulture - Detekcija mrtvog koda
+
+**Opis:** Alat za statičku detekciju nekorišćenog (mrtvog) koda — funkcija, klasa, metoda, importa i promenljivih koje se nigde ne referenciraju.
+
+**Korišćenje:**
+
+```bash
+vulture rich/ --min-confidence 60
+```
+
+**Rezultati:**
+
+Ukupno prijavljeno: 89 potencijalnih nalaza
+
+Po tipu:
+
+| Tip | Broj |
+|-----|------|
+| unused variable | 30 |
+| unused method | 18 |
+| unused class | 12 |
+| unused attribute | 11 |
+| unused property | 6 |
+| unused function | 4 |
+| unused import | 1 |
+
+Nalazi visoke pouzdanosti (90-100%):
+
+* `_null_file.py` - 12 nepovezanih argumenata (`__n`, `__limit`, `__hint`, `__offset`, `__whence`, `__size`, `__lines`, `__t`, `__value`, `__traceback`) — parametri metoda koje implementiraju `IO` interfejs ali su prazne (null objekat)
+* `style.py:29` i `syntax.py:232` - `objtype` — parametar `__get__` descriptor protokola
+* `progress.py:14` - nekorišćen import `PathLike` (90%)
+
+Reprezentativni nalazi niske pouzdanosti (60%):
+
+* Javne API klase: `Emoji`, `Bar`, `VerticalCenter`, `FloatPrompt`, `MofNCompleteColumn`, `TransferSpeedColumn`, `FileSizeColumn`
+* Javne API metode: `Console.print_exception`, `Console.save_svg`, `Console.save_text`, `Table.add_section`, `Layout.unsplit`
+* Javne properties: `Task.percentage`, `Progress.task_ids`, `ProgressBar.percentage_completed`
+
+**Analiza:**
+
+Vulture prijavljuje 89 potencijalnih nalaza, ali je ključno razlikovati stvarni mrtav kod od false-positive-a, koji su kod biblioteke inherentno česti. Za razliku od aplikacije (gde je sav kod pozvan interno), biblioteka izlaže javni API koji koriste spoljni korisnici — te funkcije i klase se nigde *unutar* projekta ne pozivaju, pa ih vulture pogrešno označava kao mrtve.
+
+Nalazi visoke pouzdanosti (90-100%) su legitimni, ali bezopasni: parametri `_null_file.py` (`__n`, `__limit`...) postoje jer klasa `NullFile` mora da ispuni `IO` interfejs iako su metode prazne, a `objtype` je deo standardnog descriptor protokola (`__get__`). Jedini pravi nalaz je nekorišćen import `PathLike` u `progress.py` (90%).
+
+Nalazi niske pouzdanosti (60%) su gotovo isključivo false-positive-i — javne klase (`Emoji`, `FloatPrompt`, kolone za progress bar), javne metode (`Console.save_svg`, `Table.add_section`) i properties koje čine deo API-ja koji Rich izlaže korisnicima. Njihovo uklanjanje bi razbilo biblioteku.
+
+Zaključak: Rich nema značajan mrtav kod. Rezultat pre svega ilustruje ograničenje statičke analize mrtvog koda nad bibliotekama — potrebno je ručno tumačenje umesto slepog uklanjanja prijavljenih stavki.
 
