@@ -233,7 +233,7 @@ Detektovana je 1 type greška — `redundant-cast` u `console.py` (linija 1540),
 
 Za terminal rendering biblioteku koja mora da rukuje ANSI escape sekvencama, cross-platform konzolnim izlazom (Windows/Unix), dinamičkim pretty-printing-om proizvoljnih Python objekata i integracijom sa eksternim lexerima, rezultat od 96.56% type precision je izvanredan i pokazuje production-grade type safety. Preostala nepreciznost je logično locirana u modulima koji po svojoj prirodi rade sa dinamičkim ili introspektivnim tipovima.
 
-### 3.6 Radon - Code complexity
+### 2.4 Radon - Code complexity
 
 **Opis:** Alat za analizu ciklomatske kompleksnosti i indeksa održivosti (maintainability index) Python koda.
 
