@@ -148,3 +148,9 @@ Change:               +24 pokrivenih linija (+0.3%)
 | traceback.py | 88% | 93% | +5% |
 | progress.py | 92% | 93% | +1% |
 | live.py | 96% | 98% | +2% |
+
+**Analiza rezultata:**
+
+Dodavanjem 25 testova pokriveno je 24 novih linija koda (nepokrivene statements pale sa 435 na 411), pri čemu ukupna pokrivenost projekta ostaje na visokih 95%. Najznačajniji napredak je u modulu `traceback.py` koji je porastao sa 88% na 93% (+5 procentnih poena), što direktno odražava nove testove koji pokrivaju konstrukciju traceback objekata i filtriranje lokalnih promenljivih. Modul `live.py` porastao je sa 96% na 98% (+2 poena), a `progress.py` sa 92% na 93% (+1 poen).
+
+
