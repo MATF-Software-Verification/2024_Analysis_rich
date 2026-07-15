@@ -90,23 +90,23 @@ pytest tests/ ~/Desktop/2024_Analysis_rich/tests --cov=rich --cov-report=html
 
 **Rezultati:**
 
-Pylint Score: 8.26/10
+Pylint Score: 8.29/10
 
 Problemi po kategoriji:
 
 | Kategorija | Broj | Procenat |
 |------------|------|----------|
-| Convention | 666 | 44.3% |
-| Refactor | 418 | 27.8% |
-| Warning | 403 | 26.8% |
+| Convention | 666 | 45.1% |
+| Refactor | 392 | 26.5% |
+| Warning | 403 | 27.3% |
 | Error | 16 | 1.1% |
-| Ukupno | 1503 | 100% |
+| Ukupno | 1477 | 100% |
 
 **Najčešći problemi:**
 
 * `line-too-long` (409) - Linije duže od 100 karaktera
 * `redefined-outer-name` (169) - Preklapanje imena parametra i spoljnog opsega
-* `cyclic-import` (117) - Ciklične zavisnosti između modula
+* `cyclic-import` (91) - Ciklične zavisnosti između modula
 * `protected-access` (102) - Pristup zaštićenim članovima (framework pattern)
 * `missing-module-docstring` (73) - Moduli bez docstring-a
 
@@ -227,7 +227,7 @@ interrogate rich/ -v
 
 * Visok kvalitet postojećeg koda
   * 95% test coverage
-  * 8.26/10 Pylint score
+  * 8.29/10 Pylint score
   * 96.56% type precision
   * 3.24 prosečna kompleksnost (ocena A)
 * Održivost
@@ -239,7 +239,7 @@ interrogate rich/ -v
 
 * Velike datoteke - 3 modula prelaze 1000 linija (`console.py`, `progress.py`, `text.py`)
 * Visoka kompleksnost - 15 funkcija (1.5%) sa ocenom C+ i više
-* Ciklične zavisnosti - 117 `cyclic-import` upozorenja (rešeno lazy import-ima)
+* Ciklične zavisnosti - 91 `cyclic-import` upozorenja (rešeno lazy import-ima)
 * Stilske nedoslednosti - 409 linija preko 100 karaktera
 
 ### Vrednost analize
