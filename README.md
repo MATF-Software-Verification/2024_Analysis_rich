@@ -69,16 +69,16 @@ pytest tests/ -v
 ```
 Baseline:  95% (postojeći Rich testovi)
 Final:     95% (Rich + naši testovi)
-Change:    +24 pokrivene linije (435 → 411 nepokrivenih)
+Change:    +27 pokrivenih linija (429 → 402 nepokrivenih)
 ```
 
 **Napredak po modulima:**
 
 * `traceback.py`: 88% → 93% (+5%)
-* `live.py`: 96% → 98% (+2%)
+* `live.py`: 93% → 96% (+3%)
 * `progress.py`: 92% → 93% (+1%)
 
-**Analiza:** Rich već ima izuzetno visoku baseline pokrivenost (95%), pa je prostor za rast ograničen. Naši testovi su ipak pokrili 24 dodatne linije, sa najvećim doprinosom u `traceback` modulu.
+**Analiza:** Rich već ima izuzetno visoku baseline pokrivenost (95%), pa je prostor za rast ograničen. Naši testovi su ipak pokrili 24 dodatne linije, sa najvećim doprinosom u `traceback` modulu (+5%).
 
 **Komanda:**
 
