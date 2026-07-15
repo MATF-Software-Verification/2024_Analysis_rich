@@ -32,7 +32,7 @@ Ovaj seminarski rad ima za cilj analizu kvaliteta Rich biblioteke kroz:
 
 ## 2. Korišćeni alati
 
-### 2.11 Pytest - Jedinični testovi
+### 2.1 Pytest - Jedinični testovi
 
 **Opis:** Framework za pisanje i pokretanje jediničnih testova u Python-u.
 
@@ -107,7 +107,7 @@ pytest tests/ -v
 * Svi testovi prolaze: 100% pass rate
 
 
-### 2.12 Coverage.py - Pokrivenost koda
+### 2.2 Coverage.py - Pokrivenost koda
 
 **Opis:** Alat za merenje pokrivenosti koda testovima - procenat koda izvršen tokom testiranja.
 
@@ -120,9 +120,9 @@ pytest tests/ --cov=rich --cov-report=term-missing --cov-report=html
 ```
 
 ```bash
-Total Statements:    8166
-Missed Statements:    435
-Overall Coverage:     94.67% (95%)
+Total Statements:    8155
+Missed Statements:    429
+Overall Coverage:     94.74% (95%)
 ```
 
 Final coverage (originalni + naši testovi):
@@ -135,10 +135,10 @@ pytest tests/ ~/Desktop/2024_Analysis_rich/tests \
 ```
 
 ```bash
-Total Statements:    8166
-Missed Statements:    411
-Overall Coverage:     94.97% (95%)
-Change:               +24 pokrivenih linija (+0.3%)
+Total Statements:    8155
+Missed Statements:    402
+Overall Coverage:     95.07% (95%)
+Change:               +27 pokrivenih linija (+0.3%)
 ```
 
 **Napredak pokrivenosti po modulima:**
@@ -147,11 +147,11 @@ Change:               +24 pokrivenih linija (+0.3%)
 |-------|:--------:|:-----:|:-------:|
 | traceback.py | 88% | 93% | +5% |
 | progress.py | 92% | 93% | +1% |
-| live.py | 96% | 98% | +2% |
+| live.py | 93% | 96% | +3% |
 
 **Analiza rezultata:**
 
-Dodavanjem 25 testova pokriveno je 24 novih linija koda (nepokrivene statements pale sa 435 na 411), pri čemu ukupna pokrivenost projekta ostaje na visokih 95%. Najznačajniji napredak je u modulu `traceback.py` koji je porastao sa 88% na 93% (+5 procentnih poena), što direktno odražava nove testove koji pokrivaju konstrukciju traceback objekata i filtriranje lokalnih promenljivih. Modul `live.py` porastao je sa 96% na 98% (+2 poena), a `progress.py` sa 92% na 93% (+1 poen).
+Dodavanjem 25 testova pokriveno je 27 novih linija koda (nepokrivene statements pale sa 429 na 402), pri čemu ukupna pokrivenost projekta ostaje na visokih 95%. Najznačajniji napredak je u modulu `traceback.py` koji je porastao sa 88% na 93% (+5 procentnih poena), što direktno odražava nove testove koji pokrivaju konstrukciju traceback objekata i filtriranje lokalnih promenljivih. Modul `live.py` porastao je sa 93% na 96% (+3 poena), a `progress.py` sa 92% na 93% (+1 poen).
 
 
 ### 2.2 MyPy - Type checking
@@ -529,9 +529,9 @@ Zaključak: Ocena „FAILED" ne znači loše dokumentovan projekat, već da podr
 
 **Coverage:**
 
-* Ukupna pokrivenost: baseline 95% → 95% (24 dodatno pokrivene linije, 435 → 411 nepokrivenih)
+* Ukupna pokrivenost: baseline 95% → 95% (27 dodatno pokrivenih linija, 429 → 402 nepokrivenih)
 * `traceback.py`: 88% → 93% (+5%)
-* `live.py`: 96% → 98% (+2%)
+* `live.py`: 93% → 96% (+3%)
 * `progress.py`: 92% → 93% (+1%)
 
 ## 4. Zaključci
@@ -566,7 +566,7 @@ Analiza kroz 6 različitih alata omogućila je:
 
 4. Ukloniti nekorišćen import `PathLike` u `progress.py`
 5. Smanjiti broj `line-too-long` upozorenja (409 linija preko 100 karaktera)
-6. Razmotriti reorganizaciju importa (24 `wrong-import-position`, 117 cikличних zavisnosti)
+6. Razmotriti reorganizaciju importa (24 `wrong-import-position`, 117 cikličnih zavisnosti)
 
 **Prioritet Low:**
 
