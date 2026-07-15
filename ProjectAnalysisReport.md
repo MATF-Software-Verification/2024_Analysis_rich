@@ -334,24 +334,24 @@ pylint rich/ --output-format=text --reports=y
 
 **Rezultati:**
 
-Pylint score: 8.26/10
+Pylint score: 8.29/10
 
 Problemi po kategoriji:
 
 | Kategorija | Broj | Opis |
 |------------|------|------|
 | Convention | 666 | Stilske konvencije |
-| Refactor | 418 | Preporuke za refaktorisanje |
+| Refactor | 392 | Preporuke za refaktorisanje |
 | Warning | 403 | Upozorenja |
 | Error | 16 | Greške (false positives) |
-| **Ukupno** | **1503** | |
+| **Ukupno** | **1477** | |
 
 Top 10 najčešćih problema:
 
 * `line-too-long` (409) - Linije duže od 100 karaktera
 * `redefined-outer-name` (169) - Preklapanje imena parametra i imena iz spoljnog opsega
-* `cyclic-import` (117) - Ciklične zavisnosti između modula
 * `protected-access` (102) - Pristup zaštićenim članovima (framework pattern)
+* `cyclic-import` (91) - Ciklične zavisnosti između modula
 * `missing-module-docstring` (73) - Moduli bez docstring-a
 * `too-many-arguments` (71) - Render metode prirodno imaju mnogo parametara
 * `unused-argument` (49) - Standardizovani `__rich_console__` interfejs
@@ -361,7 +361,7 @@ Top 10 najčešćih problema:
 
 Objašnjenje ključnih problema:
 
-`cyclic-import` (117): Posledica arhitekture Rich-a gde su moduli međusobno tesno povezani (npr. `console` → `theme` → `style` → `color`). Rich to rešava lazy import-ima unutar funkcija, što pylint dodatno prijavljuje kao `import-outside-toplevel` (40).
+`cyclic-import` (91): Posledica arhitekture Rich-a gde su moduli međusobno tesno povezani (npr. `console` → `theme` → `style` → `color`). Rich to rešava lazy import-ima unutar funkcija, što pylint dodatno prijavljuje kao `import-outside-toplevel` (40).
 
 `protected-access` (102): Neophodan u framework kodu — metode poput `Style._add` ili `Text._spans` pristupaju zaštićenim članovima drugih instanci iste klase radi performansi, što je legitiman obrazac unutar jednog modula.
 
@@ -373,7 +373,7 @@ Broj grešaka (Error, 16): Radi se o false positive-ima — pylint prijavljuje `
 
 **Analiza:**
 
-Rich kod ima visok kvalitet sa ocenom 8.26/10. Većina pylint upozorenja su stilske prirode (`line-too-long` čini preko četvrtine svih poruka) ili framework-specifični obrasci koji su u kontekstu terminal rendering biblioteke opravdani (`protected-access`, `unused-argument`, `cyclic-import`, `too-many-arguments`). Dokumentovanost je visoka na nivou metoda (96%) i klasa (87%), dok je udeo docstring-ova u kodu 33%, što pokazuje dobro dokumentovan kod.
+Rich kod ima visok kvalitet sa ocenom 8.29/10. Većina pylint upozorenja su stilske prirode (`line-too-long` čini preko četvrtine svih poruka) ili framework-specifični obrasci koji su u kontekstu terminal rendering biblioteke opravdani (`protected-access`, `unused-argument`, `cyclic-import`, `too-many-arguments`). Dokumentovanost je visoka na nivou metoda (96%) i klasa (87%), dok je udeo docstring-ova u kodu 33%, što pokazuje dobro dokumentovan kod.
 
 
 ### 2.5 Vulture - Detekcija mrtvog koda
@@ -493,7 +493,7 @@ Zaključak: Ocena „FAILED" ne znači loše dokumentovan projekat, već da podr
 |------|---------|----------|-------|
 | Pytest | Pass rate | 100% | Odlično |
 | Coverage | Overall (originalni + naši testovi) | 95% | Odlično |
-| Pylint | Score | 8.26/10 | Vrlo dobro |
+| Pylint | Score | 8.29/10 | Vrlo dobro |
 | MyPy | Type precision | 96.56% | Odlično |
 | MyPy | Type errors | 1 (postojeći, redundant-cast) | Odlično |
 | Radon | Avg complexity | 3.24 (A) | Odlično |
@@ -505,7 +505,7 @@ Zaključak: Ocena „FAILED" ne znači loše dokumentovan projekat, već da podr
 
 **Pozitivni aspekti:**
 
-* Visok kvalitet postojećeg koda — 95% coverage, 8.26/10 Pylint
+* Visok kvalitet postojećeg koda — 95% coverage, 8.29/10 Pylint
 * Odlična type safety — 96.56% type precision, 0 stvarnih type grešaka
 * Niska kompleksnost — 85.9% funkcija ocena A, prosek 3.24
 * Zanemarljiv mrtav kod — samo 1 nekorišćen import na 89 prijavljenih nalaza
@@ -515,7 +515,7 @@ Zaključak: Ocena „FAILED" ne znači loše dokumentovan projekat, već da podr
 
 * Velike datoteke — 3 modula prelaze 1000 linija (`console.py` 2680, `progress.py` 1715, `text.py` 1361), što snižava maintainability index
 * Visoka kompleksnost — 15 funkcija sa ocenom C+ i više (2 F, 4 E, 9 D)
-* Ciklične zavisnosti — 117 `cyclic-import` upozorenja (rešeno lazy import-ima)
+* Ciklične zavisnosti — 91 `cyclic-import` upozorenja (rešeno lazy import-ima)
 * Docstring pokrivenost internih/protokolskih metoda — 59.1% ukupno (prag alata 80%)
 
 ### 3.3 Uticaj naših testova
@@ -540,7 +540,7 @@ Zaključak: Ocena „FAILED" ne znači loše dokumentovan projekat, već da podr
 
 Rich je primer kvalitetno razvijenog open-source projekta sa visokim standardima:
 
-Kvalitet koda: 8.26/10 (Pylint). Test coverage: 95%. Type safety: 96.56% precision. Kompleksnost: 3.24 prosek (ocena A). Mrtav kod: praktično nema (1 nalaz).
+Kvalitet koda: 8.29/10 (Pylint). Test coverage: 95%. Type safety: 96.56% precision. Kompleksnost: 3.24 prosek (ocena A). Mrtav kod: praktično nema (1 nalaz).
 
 ### 4.2 Vrednost multi-tool pristupa
 
@@ -566,7 +566,7 @@ Analiza kroz 6 različitih alata omogućila je:
 
 4. Ukloniti nekorišćen import `PathLike` u `progress.py`
 5. Smanjiti broj `line-too-long` upozorenja (409 linija preko 100 karaktera)
-6. Razmotriti reorganizaciju importa (24 `wrong-import-position`, 117 cikličnih zavisnosti)
+6. Razmotriti reorganizaciju importa (24 `wrong-import-position`, 91 cikličnih zavisnosti)
 
 **Prioritet Low:**
 
