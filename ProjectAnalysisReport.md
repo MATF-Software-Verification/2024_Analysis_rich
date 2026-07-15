@@ -424,3 +424,63 @@ Nalazi niske pouzdanosti (60%) su gotovo isključivo false-positive-i — javne 
 
 Zaključak: Rich nema značajan mrtav kod. Rezultat pre svega ilustruje ograničenje statičke analize mrtvog koda nad bibliotekama — potrebno je ručno tumačenje umesto slepog uklanjanja prijavljenih stavki.
 
+### 2.6 Interrogate - Pokrivenost dokumentacije
+
+**Opis:** Alat za merenje procenta docstring pokrivenosti — proverava koliko modula, klasa, funkcija i metoda ima docstring.
+
+**Korišćenje:**
+
+```bash
+interrogate rich/ -v
+```
+
+**Rezultati:**
+
+Docstring coverage: 59.1% (686 od 1160 objekata dokumentovano)
+
+Rezultat: FAILED prema podrazumevanom pragu od 80%
+
+Moduli sa najboljom pokrivenošću:
+
+* `__init__.py` - 100%
+* `_spinners.py` - 100%
+* `_timer.py` - 100%
+* `errors.py` - 90%
+* `measure.py` - 89%
+* `_win32_console.py` - 89%
+* `cells.py` - 83%
+* `segment.py` - 81%
+
+Moduli sa najnižom pokrivenošću:
+
+* `rule.py` - 14%
+* `__main__.py` - 17%
+* `bar.py` - 17%
+* `constrain.py` - 20%
+* `styled.py` - 20%
+* `containers.py` - 24%
+* `file_proxy.py` - 25%
+* `screen.py` - 25%
+
+Testirani moduli:
+
+* `table.py` - 70%
+* `progress.py` - 56%
+* `live.py` - 58%
+* `panel.py` - 33%
+* `traceback.py` - 33%
+
+**Analiza:**
+
+Interrogate meri strožiju metriku od ostalih alata: broji apsolutno svaki objekat — modul, klasu, funkciju, metodu, uključujući privatne (`_`), dunder (`__init__`, `__rich_console__`) i ugnježdene funkcije. Zato je rezultat od 59.1% niži nego što bi se očekivalo na osnovu pylint izveštaja, koji je pokazao 96% dokumentovanih metoda — pylint prevashodno prati javne članove, dok interrogate ne pravi razliku.
+
+Nizak procenat je najvećim delom posledica dizajna Rich-a, a ne nedostatka dokumentacije:
+
+* Protokolske metode (`__rich_console__`, `__rich_measure__`, `__rich_repr__`) se ponavljaju u desetinama klasa i po konvenciji nemaju docstring jer im je značenje standardizovano
+* Dunder metode (`__init__`, `__eq__`, `__len__`, `__enter__`) retko nose docstring
+* Interni moduli (`_null_file.py`, `_log_render.py`, `_emoji_codes.py`) sa 0% su implementacioni detalji koji ne čine javni API
+
+Nasuprot tome, javni API je dobro dokumentovan — glavne korisničke klase kao `Console` (76%), `Text` (75%), `Table` (70%) i `Syntax` (74%) imaju visoku pokrivenost, što se poklapa sa pylint metrikom o dokumentovanosti javnog interfejsa.
+
+Zaključak: Ocena „FAILED" ne znači loše dokumentovan projekat, već da podrazumevani prag od 80% računa i interne/protokolske metode koje po konvenciji nemaju docstring. Realna dokumentovanost javnog API-ja je znatno viša od ukupnih 59.1%.
+
