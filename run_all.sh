@@ -4,7 +4,7 @@ echo "========================================="
 echo "Running all analysis"
 echo "========================================="
 echo ""
-./pytest/run_pytest.sh
+./pytest/run_tests.sh
 echo ""
 ./coverage/run_coverage.sh
 echo ""
