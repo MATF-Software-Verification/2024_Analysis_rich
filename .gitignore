@@ -2,3 +2,7 @@
 __pycache__/
 htmlcov/
 *.pyc
+venv/
+.venv/
+__pycache__/
+*.pyc
