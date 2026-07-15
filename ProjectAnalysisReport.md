@@ -107,7 +107,7 @@ pytest tests/ -v
 * Svi testovi prolaze: 100% pass rate
 
 
-### 2.2 Coverage.py - Pokrivenost koda
+### 2.12 Coverage.py - Pokrivenost koda
 
 **Opis:** Alat za merenje pokrivenosti koda testovima - procenat koda izvršen tokom testiranja.
 
