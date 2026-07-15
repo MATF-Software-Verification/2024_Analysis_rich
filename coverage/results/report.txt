@@ -1,14 +1,11 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
-rootdir: /home/vojan/Desktop/rich/tests
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/vojan/Desktop/2024_Analysis_rich/rich/tests
 configfile: pytest.ini
-plugins: cov-7.0.0
-collected 908 items
+plugins: cov-7.1.0
+collected 905 items
 
-tests/custom/test_live.py .                                              [  0%]
-tests/custom/test_progress_unit.py .                                     [  0%]
-tests/custom/test_traceback_unit.py .                                    [  0%]
-tests/test_align.py ................                                     [  2%]
+tests/test_align.py ................                                     [  1%]
 tests/test_ansi.py .......................                               [  4%]
 tests/test_bar.py .......                                                [  5%]
 tests/test_block_bar.py ....                                             [  5%]
@@ -17,44 +14,44 @@ tests/test_card.py .                                                     [  6%]
 tests/test_cells.py ........                                             [  7%]
 tests/test_color.py .................                                    [  9%]
 tests/test_color_triplet.py ...                                          [  9%]
-tests/test_columns.py .                                                  [ 10%]
-tests/test_columns_align.py .                                            [ 10%]
+tests/test_columns.py .                                                  [  9%]
+tests/test_columns_align.py .                                            [  9%]
 tests/test_console.py .................................................. [ 15%]
-.................................................                        [ 21%]
-tests/test_constrain.py .                                                [ 21%]
+.................................................                        [ 20%]
+tests/test_constrain.py .                                                [ 20%]
 tests/test_containers.py ....                                            [ 21%]
 tests/test_control.py .......                                            [ 22%]
-tests/test_emoji.py ......                                               [ 23%]
+tests/test_emoji.py ......                                               [ 22%]
 tests/test_file_proxy.py ...                                             [ 23%]
 tests/test_filesize.py ..                                                [ 23%]
 tests/test_getfileno.py ...                                              [ 23%]
 tests/test_highlighter.py .............................................. [ 28%]
-.....................................                                    [ 33%]
+.....................................                                    [ 32%]
 tests/test_inspect.py ...s....sss..................................      [ 37%]
-tests/test_json.py .                                                     [ 38%]
+tests/test_json.py .                                                     [ 37%]
 tests/test_jupyter.py ...                                                [ 38%]
-tests/test_layout.py ......                                              [ 39%]
+tests/test_layout.py ......                                              [ 38%]
 tests/test_live.py ..........                                            [ 40%]
 tests/test_live_render.py ....                                           [ 40%]
 tests/test_log.py ...                                                    [ 40%]
 tests/test_logging.py ....                                               [ 41%]
-tests/test_markdown.py .......                                           [ 42%]
+tests/test_markdown.py .......                                           [ 41%]
 tests/test_markdown_no_hyperlinks.py .                                   [ 42%]
 tests/test_markup.py .....................                               [ 44%]
-tests/test_measure.py ....                                               [ 45%]
-tests/test_null_file.py .                                                [ 45%]
+tests/test_measure.py ....                                               [ 44%]
+tests/test_null_file.py .                                                [ 44%]
 tests/test_padding.py .....                                              [ 45%]
 tests/test_palette.py .                                                  [ 45%]
 tests/test_panel.py .............                                        [ 47%]
 tests/test_pick.py .                                                     [ 47%]
 tests/test_pretty.py ............................................s...... [ 52%]
-.                                                                        [ 53%]
+.                                                                        [ 52%]
 tests/test_progress.py ......................................            [ 57%]
-tests/test_prompt.py .......                                             [ 58%]
+tests/test_prompt.py .......                                             [ 57%]
 tests/test_protocol.py ......                                            [ 58%]
 tests/test_ratio.py .......                                              [ 59%]
 tests/test_repr.py ........                                              [ 60%]
-tests/test_rich_print.py .......                                         [ 61%]
+tests/test_rich_print.py .......                                         [ 60%]
 tests/test_rule.py ................                                      [ 62%]
 tests/test_rule_in_table.py ....                                         [ 63%]
 tests/test_screen.py .                                                   [ 63%]
@@ -100,86 +97,94 @@ tests/test_task_defaults.py .                                            [ 99%]
 tests/test_task_percentage.py .                                          [ 99%]
 tests/test_track_thread.py .                                             [100%]
 
+=============================== warnings summary ===============================
+../.venv/lib/python3.12/site-packages/_pytest/python.py:124
+  /home/vojan/Desktop/2024_Analysis_rich/.venv/lib/python3.12/site-packages/_pytest/python.py:124: PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+  Test: test_panel.py::test_render_panel, argvalues type: zip
+  Please convert to a list or tuple.
+  See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ================================ tests coverage ================================
 _______________ coverage: platform linux, python 3.12.3-final-0 ________________
 
-Name                                     Stmts   Miss  Cover
-------------------------------------------------------------
-rich/__init__.py                            31      2    94%
-rich/__main__.py                            68      0   100%
-rich/_cell_widths.py                         1      0   100%
-rich/_emoji_codes.py                         1      0   100%
-rich/_emoji_replace.py                      18      0   100%
-rich/_export_format.py                       4      0   100%
-rich/_extension.py                           1      0   100%
-rich/_fileno.py                             10      0   100%
-rich/_inspect.py                           142      1    99%
-rich/_log_render.py                         48      0   100%
-rich/_loop.py                               33      0   100%
-rich/_null_file.py                          42      0   100%
-rich/_palettes.py                            4      0   100%
-rich/_pick.py                                7      0   100%
-rich/_ratio.py                              61      0   100%
-rich/_spinners.py                            1      0   100%
-rich/_stack.py                               8      0   100%
-rich/_win32_console.py                     199    193     3%
-rich/_windows_renderer.py                   45     45     0%
-rich/_wrap.py                               41      0   100%
-rich/abc.py                                  5      0   100%
-rich/align.py                              125      0   100%
-rich/ansi.py                                74      0   100%
-rich/bar.py                                 42      0   100%
-rich/box.py                                102      0   100%
-rich/cells.py                               78      1    99%
-rich/color.py                              190      0   100%
-rich/color_triplet.py                       20      0   100%
-rich/columns.py                             98      0   100%
-rich/console.py                            993     52    95%
-rich/constrain.py                           17      0   100%
-rich/containers.py                          82      0   100%
-rich/control.py                             59      0   100%
-rich/default_styles.py                       3      0   100%
-rich/emoji.py                               31      0   100%
-rich/errors.py                               9      0   100%
-rich/file_proxy.py                          40      1    98%
-rich/filesize.py                            20      0   100%
-rich/highlighter.py                         53      0   100%
-rich/json.py                                24      0   100%
-rich/layout.py                             193      0   100%
-rich/live.py                               160      4    98%
-rich/live_render.py                         47      0   100%
-rich/logging.py                             80      2    98%
-rich/markdown.py                           368      1    99%
-rich/markup.py                             119      0   100%
-rich/measure.py                             54      0   100%
-rich/padding.py                             67      0   100%
-rich/pager.py                                8      0   100%
-rich/palette.py                             32      0   100%
-rich/panel.py                              119      2    98%
-rich/pretty.py                             396     13    97%
-rich/progress.py                           622     43    93%
-rich/progress_bar.py                       100      1    99%
-rich/prompt.py                             103      0   100%
-rich/protocol.py                            18      0   100%
-rich/region.py                               6      0   100%
-rich/repr.py                                54      0   100%
-rich/rule.py                                69      0   100%
-rich/scope.py                               19      0   100%
-rich/screen.py                              22      0   100%
-rich/segment.py                            313      3    99%
-rich/spinner.py                             49      0   100%
-rich/status.py                              42      0   100%
-rich/style.py                              431      2    99%
-rich/styled.py                              15      0   100%
-rich/syntax.py                             344      8    98%
-rich/table.py                              405      0   100%
-rich/terminal_theme.py                      14      0   100%
-rich/test_exception_group_traceback.py      11     11     0%
-rich/text.py                               609      6    99%
-rich/theme.py                               39      0   100%
-rich/themes.py                               3      0   100%
-rich/traceback.py                          301     20    93%
-rich/tree.py                               104      0   100%
-------------------------------------------------------------
-TOTAL                                     8166    411    95%
-======================= 883 passed, 25 skipped in 14.66s =======================
+Name                        Stmts   Miss  Cover
+-----------------------------------------------
+rich/__init__.py               31      2    94%
+rich/__main__.py               68      0   100%
+rich/_cell_widths.py            1      0   100%
+rich/_emoji_codes.py            1      0   100%
+rich/_emoji_replace.py         18      0   100%
+rich/_export_format.py          4      0   100%
+rich/_extension.py              1      0   100%
+rich/_fileno.py                10      0   100%
+rich/_inspect.py              142      1    99%
+rich/_log_render.py            48      0   100%
+rich/_loop.py                  33      0   100%
+rich/_null_file.py             42      0   100%
+rich/_palettes.py               4      0   100%
+rich/_pick.py                   7      0   100%
+rich/_ratio.py                 61      0   100%
+rich/_spinners.py               1      0   100%
+rich/_stack.py                  8      0   100%
+rich/_win32_console.py        199    193     3%
+rich/_windows_renderer.py      45     45     0%
+rich/_wrap.py                  41      0   100%
+rich/abc.py                     5      0   100%
+rich/align.py                 125      0   100%
+rich/ansi.py                   74      0   100%
+rich/bar.py                    42      0   100%
+rich/box.py                   102      0   100%
+rich/cells.py                  78      1    99%
+rich/color.py                 190      0   100%
+rich/color_triplet.py          20      0   100%
+rich/columns.py                98      0   100%
+rich/console.py               993     52    95%
+rich/constrain.py              17      0   100%
+rich/containers.py             82      0   100%
+rich/control.py                59      0   100%
+rich/default_styles.py          3      0   100%
+rich/emoji.py                  31      0   100%
+rich/errors.py                  9      0   100%
+rich/file_proxy.py             40      1    98%
+rich/filesize.py               20      0   100%
+rich/highlighter.py            53      0   100%
+rich/json.py                   24      0   100%
+rich/layout.py                193      0   100%
+rich/live.py                  160      6    96%
+rich/live_render.py            47      0   100%
+rich/logging.py                80      2    98%
+rich/markdown.py              368      1    99%
+rich/markup.py                119      0   100%
+rich/measure.py                54      0   100%
+rich/padding.py                67      0   100%
+rich/pager.py                   8      0   100%
+rich/palette.py                32      0   100%
+rich/panel.py                 119      2    98%
+rich/pretty.py                396     13    97%
+rich/progress.py              622     43    93%
+rich/progress_bar.py          100      1    99%
+rich/prompt.py                103      0   100%
+rich/protocol.py               18      0   100%
+rich/region.py                  6      0   100%
+rich/repr.py                   54      0   100%
+rich/rule.py                   69      0   100%
+rich/scope.py                  19      0   100%
+rich/screen.py                 22      0   100%
+rich/segment.py               313      3    99%
+rich/spinner.py                49      0   100%
+rich/status.py                 42      0   100%
+rich/style.py                 431      2    99%
+rich/styled.py                 15      0   100%
+rich/syntax.py                344      8    98%
+rich/table.py                 405      0   100%
+rich/terminal_theme.py         14      0   100%
+rich/text.py                  609      6    99%
+rich/theme.py                  39      0   100%
+rich/themes.py                  3      0   100%
+rich/traceback.py             301     20    93%
+rich/tree.py                  104      0   100%
+-----------------------------------------------
+TOTAL                        8155    402    95%
+================= 880 passed, 25 skipped, 1 warning in 49.29s ==================

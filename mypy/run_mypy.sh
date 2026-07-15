@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Putanja do rich projekta
-RICH_DIR="$HOME/Desktop/rich"
+RICH_DIR="$(cd "$(dirname "$0")/../rich" && pwd)"
 
 # Apsolutna putanja do foldera sa skriptom (pre cd)
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

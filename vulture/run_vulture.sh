@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-RICH_DIR="$HOME/Desktop/rich"
+RICH_DIR="$(cd "$(dirname "$0")/../rich" && pwd)"
 
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

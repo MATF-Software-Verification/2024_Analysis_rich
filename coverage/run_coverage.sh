@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Putanje do projekta i test foldera
-RICH_DIR="$HOME/Desktop/rich"
-NEW_TESTS="$HOME/Desktop/2024_Analysis_rich/tests"
+RICH_DIR="$(cd "$(dirname "$0")/../rich" && pwd)"
+NEW_TESTS="$(cd "$(dirname "$0")/../tests" && pwd)"
 
 # Apsolutna putanja do foldera sa skriptom (pre cd)
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

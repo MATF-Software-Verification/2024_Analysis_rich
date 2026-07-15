@@ -1,8 +1,8 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/vojan/Desktop/rich/venv/bin/python3
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/vojan/Desktop/2024_Analysis_rich/.venv/bin/python
 cachedir: .pytest_cache
 rootdir: /home/vojan/Desktop/2024_Analysis_rich
-plugins: cov-7.0.0
+plugins: cov-7.1.0
 collecting ... collected 25 items
 
 tests/test_add_task.py::test_add_task PASSED                             [  4%]
@@ -31,4 +31,4 @@ tests/test_task_defaults.py::test_task_defaults PASSED                   [ 92%]
 tests/test_task_percentage.py::test_task_percentage PASSED               [ 96%]
 tests/test_track_thread.py::test_track_thread_advances PASSED            [100%]
 
-============================== 25 passed in 0.50s ==============================
+============================== 25 passed in 0.92s ==============================

@@ -6,3 +6,11 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+.coverage
+venv/
+.venv/
+__pycache__/
+*.pyc
+.coverage
+htmlcov/
+.pytest_cache/

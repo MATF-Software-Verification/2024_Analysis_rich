@@ -1,4 +1,4 @@
-================= Coverage for /home/vojan/Desktop/rich/rich/ ==================
+======== Coverage for /home/vojan/Desktop/2024_Analysis_rich/rich/rich/ ========
 ----------------------------------- Summary ------------------------------------
 | Name                         |     Total |     Miss |     Cover |     Cover% |
 |------------------------------|-----------|----------|-----------|------------|
